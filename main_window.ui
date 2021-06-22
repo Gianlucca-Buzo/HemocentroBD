@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>988</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="main_tabs">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>10</y>
+      <width>831</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_clients">
+     <attribute name="title">
+      <string>Doador</string>
+     </attribute>
+     <widget class="QLineEdit" name="input_clients_name">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>120</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_name">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>120</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CPF</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_phone">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>150</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_address">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>180</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Email</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_company">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>210</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sexo</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_phone">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>150</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_address">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>180</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_company">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>210</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_email">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>240</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Data de Nascimento</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_email">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>240</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_clients_add">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>150</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Adicionar Doador</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_email_3">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>280</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tipo Sanguíneo</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_email_3">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>280</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_email_4">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>410</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_email_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>410</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Número</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_email_5">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>380</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_email_5">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>380</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Complemento</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_email_6">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>340</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_email_6">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>340</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rua</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_name_5">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>300</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Telefone Fixo</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_name_5">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>300</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_clients_name_8">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>230</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Celular</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_clients_name_8">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>230</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_transactions">
+     <attribute name="title">
+      <string>Doação</string>
+     </attribute>
+     <widget class="QComboBox" name="box_transac_client">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_transac_client">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>60</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cliente</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_transac_product">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>110</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Produto</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="box_transac_product">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>110</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_transac_purchase">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>160</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_transac_sale">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>200</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_transac_pay_day">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>240</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_transac_quantity">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>280</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_transac_purchase">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>160</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Valor de Compra</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_transac_sale">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>200</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Valor de Venda</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_transac_pay_day">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Data de pagamento</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_transac_quantity">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>280</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Quantidade </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_transac_payment">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>320</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Forma de pagamento</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="box_transac_payment">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>320</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dinheiro</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cheque</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="button_transac_add">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>350</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Adicionar Transação</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_transac_type">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>110</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tipo</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="box_transac_type">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>110</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_trips">
+     <attribute name="title">
+      <string>Funcionário</string>
+     </attribute>
+     <widget class="QTabWidget" name="trips_tabs">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>711</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tr_general_vision_tab">
+       <attribute name="title">
+        <string>Visão da Viagem</string>
+       </attribute>
+       <widget class="QTableView" name="tr_table_general_view">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>411</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_general_cost">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>240</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Custo Geral:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="tr_start_trip_button">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>50</y>
+          <width>191</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Começar Viagem</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="tr_finish_trip_button">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>240</y>
+          <width>191</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Finalizar Viagem</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tr_sales_tab">
+       <attribute name="title">
+        <string>Vendas</string>
+       </attribute>
+       <widget class="QLabel" name="tr_label_sale_client">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cliente</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="tr_box_sale_client">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>20</y>
+          <width>86</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="tr_box_sale_product">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>70</y>
+          <width>86</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_sale_product">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Produto</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="tr_box_sale_type">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>70</y>
+          <width>86</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_sale_type">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>70</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tipo</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="tr_input_sale_purchase">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>120</y>
+          <width>211</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_sale_purchase">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Valor de Compra</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="tr_input_sale_value">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>160</y>
+          <width>211</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_sale_value">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>160</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Valor de Venda</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="tr_input_sale_pay_day">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>200</y>
+          <width>211</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_sale_pay_day">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>141</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Data de pagamento</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_sale_quantity">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>230</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Quantidade </string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="tr_input_sale_quantity">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>240</y>
+          <width>211</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="tr_box_sale_payment">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>290</y>
+          <width>86</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dinheiro</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cheque</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="tr_label_sale_payment">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>290</y>
+          <width>151</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Forma de pagamento</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="tr_button_sale">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>290</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Adicionar Venda</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tr_cost_tab">
+       <attribute name="title">
+        <string>Custo</string>
+       </attribute>
+       <widget class="QLabel" name="tr_label_cost_type">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>70</y>
+          <width>41</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tipo</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="tr_box_cost_type">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>70</y>
+          <width>121</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Alimentação</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Combustível</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mecânico</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Estadia</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Outros</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="tr_input_cost_value">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>110</y>
+          <width>211</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_cost_value">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Valor do Custo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tr_label_cost_description">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>141</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Descrição (Opcional)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="tr_input_cost_description">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>150</y>
+          <width>211</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="tr_add_cost">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>230</y>
+          <width>171</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Adicionar Custo</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_products">
+     <attribute name="title">
+      <string>Hospital</string>
+     </attribute>
+     <widget class="QLabel" name="label_products_add">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Adicionar Produto</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_products_remove">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>20</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Remover Produto</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_vertical">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>60</y>
+        <width>20</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_products_add_name">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_products_add_name">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>100</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_products_add">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>160</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Adicionar </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_products_remove">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>160</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Remover</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_products_remove_name">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>100</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_products_remove_name">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>100</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="Line" name="line_horizontal">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>220</y>
+        <width>591</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_products_add_type">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>250</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Adicionar Tipo</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_products_remove_type">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>250</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Remover Tipo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_products_add_type">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>370</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Adicionar </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_products_add_name_type">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>310</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_products_add_name_type">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_products_remove_name_type">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>300</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_products_remove_type">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>360</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Remover</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_products_remove_name_type">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>300</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Pedido</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Transação</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>input_clients_name</tabstop>
+  <tabstop>input_clients_phone</tabstop>
+  <tabstop>input_clients_address</tabstop>
+  <tabstop>input_clients_company</tabstop>
+  <tabstop>input_clients_email</tabstop>
+  <tabstop>button_clients_add</tabstop>
+  <tabstop>input_products_add_name</tabstop>
+  <tabstop>button_products_add</tabstop>
+  <tabstop>box_transac_type</tabstop>
+  <tabstop>main_tabs</tabstop>
+  <tabstop>box_transac_client</tabstop>
+  <tabstop>box_transac_product</tabstop>
+  <tabstop>input_transac_purchase</tabstop>
+  <tabstop>input_transac_sale</tabstop>
+  <tabstop>input_transac_pay_day</tabstop>
+  <tabstop>input_transac_quantity</tabstop>
+  <tabstop>box_transac_payment</tabstop>
+  <tabstop>button_transac_add</tabstop>
+  <tabstop>button_products_remove</tabstop>
+  <tabstop>input_products_remove_name</tabstop>
+  <tabstop>trips_tabs</tabstop>
+  <tabstop>tr_table_general_view</tabstop>
+  <tabstop>tr_box_sale_client</tabstop>
+  <tabstop>tr_box_sale_product</tabstop>
+  <tabstop>tr_box_sale_type</tabstop>
+  <tabstop>tr_input_sale_purchase</tabstop>
+  <tabstop>tr_input_sale_value</tabstop>
+  <tabstop>tr_input_sale_pay_day</tabstop>
+  <tabstop>tr_input_sale_quantity</tabstop>
+  <tabstop>tr_box_sale_payment</tabstop>
+  <tabstop>tr_box_cost_type</tabstop>
+  <tabstop>tr_input_cost_value</tabstop>
+  <tabstop>tr_input_cost_description</tabstop>
+  <tabstop>tr_start_trip_button</tabstop>
+  <tabstop>tr_finish_trip_button</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
