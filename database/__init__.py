@@ -2,8 +2,8 @@ import mysql.connector
 
 db = mysql.connector.connect(
             host="localhost",
-            user="root",
-            passwd="gzvnpy",
+            user="lucca",
+            passwd="lucca2021",
             database='HEMOCENTRO',
             auth_plugin='mysql_native_password'
         )

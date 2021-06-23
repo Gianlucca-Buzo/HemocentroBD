@@ -1,3 +1,5 @@
+from database import cursor, db
+
 def exists_employee (cpf):
     cursor.execute("SELECT Nome FROM Doador WHERE CPF = '%s' " % (cpf,))
     return mysql.verify_cursor(cursor)
