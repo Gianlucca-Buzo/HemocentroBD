@@ -1,7 +1,7 @@
 from typing import Tuple
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets,QtGui
 from PyQt5.uic import loadUi
-from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
+from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QTableView
 import sys
 from database import donor,order
 from datetime import date
@@ -51,13 +51,15 @@ class NewWindow(QMainWindow):
         pesquisa_data_doador = self.dateToString(self.pesquisa_data_doador.text())
         fields = donor.create_dictionary_fields (checkboxTuple)
         values = donor.create_dictionary((self.pesquisa_cpf_doador.text(), self.pesquisa_nome_doador.text(), self.pesquisa_email_doador.text(), self.pesquisa_box_sexo_doador.currentText(),pesquisa_data_doador,self.pesquisa_box_tiposanguineo_doador.currentText()))
-        donor.select_donor(fields,values)
-        self.displayTable()
+        result = donor.select_donor(fields,values)
+        self.displayTable(result)
 
 
-    def displayTable(self):
+    def displayTable(self,results):
         self.dialog = TableWindow(self)
+        self.dialog.loadData(results)
         self.dialog.show()
+
             
         
     def getDoacaoForms(self):
@@ -68,17 +70,17 @@ class NewWindow(QMainWindow):
 
     def getFuncionarioForms(self):
         data_funcionario = self.dateToString(self.entrada_data_funcionario.text())
-        print((self.entrada_cpf_funcionario.text(),self.entrada_nome_funcionario.text(), self.entrada_email_funcionario.text(),self.box_sexo_funcionario.currentText(),data_funcionario,self.entrada_salario_funcionario.text(),self.entrada_cargo_funcionario.text()), (self.entrada_cpf_funcionario.text(),self.entrada_rua_funcionario.text(),self.entrada_numero_funcionario.text(),self.entrada_complemento_funcionario.text()),((self.entrada_cpf_funcionario.text(),self.entrada_celular_funcionario.text()),(self.entrada_cpf_funcionario.text(),self.entrada_telefone_funcionario.text())))
+        print((self.entrada_cpf_funcionario.text(),self.entrada_nome_funcionario.text(), self.entrada_email_funcionario.text(),self.box_sexo_funcionario.currentText(),data_funcionario,float(self.entrada_salario_funcionario.text()),self.entrada_cargo_funcionario.text()), (self.entrada_cpf_funcionario.text(),self.entrada_rua_funcionario.text(),self.entrada_numero_funcionario.text(),self.entrada_complemento_funcionario.text()),((self.entrada_cpf_funcionario.text(),self.entrada_celular_funcionario.text()),(self.entrada_cpf_funcionario.text(),self.entrada_telefone_funcionario.text())))
         self.emptyFuncionarioForms()
 
     def getEnfermeiroForms(self):
         data_enfermeiro = self.dateToString(self.entrada_data_enfermeiro.text())
-        print((self.entrada_cpf_enfermeiro.text(),self.entrada_nome_enfermeiro.text(), self.entrada_email_enfermeiro.text(),self.box_sexo_enfermeiro.currentText(),data_enfermeiro,self.entrada_salario_enfermeiro.text(),self.entrada_coren_enfermeiro.text(),self.entrada_cofen_enfermeiro.text()), (self.entrada_cpf_enfermeiro.text(),self.entrada_rua_enfermeiro.text(),self.entrada_numero_enfermeiro.text(),self.entrada_complemento_enfermeiro.text()),((self.entrada_cpf_enfermeiro.text(),self.entrada_celular_enfermeiro.text()),(self.entrada_cpf_enfermeiro.text(),self.entrada_telefone_enfermeiro.text())))
+        print((self.entrada_cpf_enfermeiro.text(),self.entrada_nome_enfermeiro.text(), self.entrada_email_enfermeiro.text(),self.box_sexo_enfermeiro.currentText(),data_enfermeiro,float(self.entrada_salario_enfermeiro.text()),self.entrada_coren_enfermeiro.text(),self.entrada_cofen_enfermeiro.text()), (self.entrada_cpf_enfermeiro.text(),self.entrada_rua_enfermeiro.text(),self.entrada_numero_enfermeiro.text(),self.entrada_complemento_enfermeiro.text()),((self.entrada_cpf_enfermeiro.text(),self.entrada_celular_enfermeiro.text()),(self.entrada_cpf_enfermeiro.text(),self.entrada_telefone_enfermeiro.text())))
         self.emptyEnfermeiroForms()
 
     def getAdminForms(self):
         data_admin = self.dateToString(self.entrada_data_admin.text())
-        print((self.entrada_cpf_admin.text(),self.entrada_nome_admin.text(), self.entrada_email_admin.text(),self.box_sexo_admin.currentText(),data_admin,self.entrada_salario_admin.text(),self.entrada_usuario_admin.text(),self.entrada_senha_admin.text()), (self.entrada_cpf_admin.text(),self.entrada_rua_admin.text(),self.entrada_numero_admin.text(),self.entrada_complemento_admin.text()),((self.entrada_cpf_admin.text(),self.entrada_celular_admin.text()),(self.entrada_cpf_admin.text(),self.entrada_telefone_admin.text())))
+        print((self.entrada_cpf_admin.text(),self.entrada_nome_admin.text(), self.entrada_email_admin.text(),self.box_sexo_admin.currentText(),data_admin,float(self.entrada_salario_admin.text()),self.entrada_usuario_admin.text(),self.entrada_senha_admin.text()), (self.entrada_cpf_admin.text(),self.entrada_rua_admin.text(),self.entrada_numero_admin.text(),self.entrada_complemento_admin.text()),((self.entrada_cpf_admin.text(),self.entrada_celular_admin.text()),(self.entrada_cpf_admin.text(),self.entrada_telefone_admin.text())))
         self.emptyAdminForms()
 
     def getHospitalForms(self):
@@ -198,7 +200,34 @@ class NewWindow(QMainWindow):
 class TableWindow(QDialog):
     def __init__(self, parent= None):
         super(QDialog, self).__init__(parent)
-        loadUi("HemocentroBD/table.ui",self)
+        loadUi("HemocentroBD/table2.ui",self)
+        # self.tableWidget.setColumnWidth(0, 250)
+        # self.tableWidget.setColumnWidth(1, 100)
+        # self.tableWidget.setColumnWidth(2, 350)
+        # self.tableWidget.setHorizontalHeaderLabels(["City","Country","Subcountry"])
+        # self.loaddata()
+
+    # def loadData(self,cursor):
+    #     num_fields = len(cursor.description)
+    #     field_names = [i[0] for i in cursor.description]
+    #     model = QtGui.QStandardItemModel()
+    #     model.setHorizontalHeaderLabels(field_names)
+    #     self.tableView.setModel(model)
+
+    def loadData(self,results):
+        data = results[0]
+        headers = results[1]
+        lenHeaders = len(headers)
+        self.tableWidget.setColumnCount(lenHeaders)
+        self.tableWidget.setHorizontalHeaderLabels(headers)
+        # self.tableWidget.setItem(0,0, QtWidgets.QTableWidgetItem("teste"))
+        index = 0
+        self.tableWidget.setRowCount(len(data))
+        for row in data:
+            for column in range(0,lenHeaders):
+                value = row[column]
+                self.tableWidget.setItem(index,column,QtWidgets.QTableWidgetItem(row[column].__str__()))
+            index += 1
 
 
 app = QApplication(sys.argv)

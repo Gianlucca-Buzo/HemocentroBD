@@ -7,7 +7,7 @@ db = mysql.connector.connect(
             database='HEMOCENTRO',
             auth_plugin='mysql_native_password'
         )
-cursor = db.cursor()
+cursor = db.cursor(buffered=True)
 
 
 

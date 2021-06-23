@@ -146,11 +146,18 @@ def create_string_fields (dictionary):
 
 def select_donor (fields,values):
     # print(f"SELECT * FROM Doador WHERE {values} INNER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF INNER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF ")
-    cursor.execute(f"SELECT {fields} FROM Doador as d INNER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF INNER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF WHERE {values}")
-    for client in cursor:
-        num_campos = len(client)
-        print(f"num campos cursor {len(cursor.description)}")
-        for i in range (0,num_campos):
-            print(client[i])
+    print(fields,values)
+    cursor.execute(f"SELECT {fields} FROM Doador as d INNER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF INNER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF WHERE {values} GROUP BY d.CPF")
+    results = []
+    field_names = [i[0] for i in cursor.description]
+    for row in cursor:
+        results.append(row)
+    return (results,field_names)
+    # for client in cursor:
+    #     num_campos = len(client)
+    #     print(f"num campos cursor {len(cursor.description)}")
+    #     for i in range (0,num_campos):
+    #         print(client[i])
         # return client[0]
 
+#SELECT d.CPF,d.Nome,d.Email,d.Sexo,d.DataNascimento,d.TipoSanguineo,GROUP_CONCAT(t.Numero) as NumerosTelefone,e.Rua,e.Numero,e.Complemento FROM Doador as d INNER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF INNER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF WHERE Sexo = 'M';

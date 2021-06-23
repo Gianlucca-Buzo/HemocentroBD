@@ -90,8 +90,8 @@ def create_string_fields (dictionary):
             string += f"e.Complemento"
     return string
 
-def select_donor (fields,values):
-    cursor.execute(f"SELECT {fields} FROM HOSPITAL as H INNER JOIN Telefones_Hospital AS t ON t.ID_Hospital = h.ID_Hospital INNER JOIN Endereco_Hospital AS e ON e.ID_Hospital = h.ID_Hospital WHERE {values}")
+def select_hospital (fields,values):
+    cursor.execute(f"SELECT {fields} FROM HOSPITAL as H INNER JOIN Telefones_Hospital AS t ON t.ID_Hospital = h.ID_Hospital INNER JOIN Endereco_Hospital AS e ON e.ID_Hospital = h.ID_Hospital WHERE {values} GROUP BY h.ID_Hospital")
     for client in cursor:
         num_campos = len(client)
         print(f"num campos cursor {len(cursor.description)}")

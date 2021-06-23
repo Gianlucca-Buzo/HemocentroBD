@@ -1,4 +1,4 @@
-from database import cursor, db
+from database import cursor, db, stock
 
 def insert_donation (donation_values):
     cursor.execute("INSERT INTO Doacao (ID_Doador,ID_Enfermeiro,DataDoacao,Quantidade) VALUES %s" % (donation_values,))
@@ -64,7 +64,7 @@ def create_string_fields (dictionary):
             string += f"Quantidade"
     return string
 
-def select_donor (fields,values):
+def select_donation (fields,values):
     cursor.execute(f"SELECT {fields} FROM Doacao WHERE {values}")
     for client in cursor:
         num_campos = len(client)

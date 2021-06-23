@@ -78,11 +78,19 @@ def create_string_fields (dictionary):
             string += f"p.DataPedido"
     return string
 
-def select_donor (fields,values):
+def select_order (fields,values):
     cursor.execute(f"SELECT {fields} FROM Pedido AS p INNER JOIN Hospital AS h ON h.ID_Hospital=p.ID_Hospital WHERE {values}")
     for client in cursor:
         num_campos = len(client)
         for i in range (0,num_campos):
             print(client[i])
         # return client[0]  
+
+def select():
+    cursor.execute(f"SELECT * FROM Pedido")
+    for client in cursor:
+        num_campos = len(client)
+        for i in range (0,num_campos):
+            print(client[i])
+
 
