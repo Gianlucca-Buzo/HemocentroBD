@@ -2,10 +2,11 @@ from database import cursor, db
 
 def select():
     cursor.execute(f"SELECT * FROM Estoque")
+    field_names = [i[0] for i in cursor.description]
+    results = []
     for client in cursor:
-        num_campos = len(client)
-        for i in range (0,num_campos):
-            print(client[i])
+        results.append(client)
+    return (results,field_names)
 
 def update(tipoSanguineo,quantidade):
     nova_quantidade = select_quantidade(tipoSanguineo) + (quantidade)

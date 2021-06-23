@@ -3,7 +3,7 @@ from PyQt5 import QtWidgets,QtGui
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QTableView
 import sys
-from database import donor,order
+from database import donor,order,donation,employee,stock,transaction,hospital
 from datetime import date
 
 
@@ -19,22 +19,15 @@ class NewWindow(QMainWindow):
         self.botao_adicionar_hospital.clicked.connect(self.getHospitalForms)
         self.botao_adicionar_pedido.clicked.connect(self.getPedidoForms)
         self.botao_pesquisar_doador.clicked.connect(self.getDoadorPesquisaForms)
-
-    
-    def getDoadorForms(self):
-        data_doador = self.dateToString(self.entrada_data_doador.text())
-        values = donor.create_dictionary((self.entrada_cpf_doador.text(), self.entrada_nome_doador.text(), self.entrada_email_doador.text(), self.box_sexo_doador.currentText(),data_doador,self.box_tiposanguineo_doador.currentText()))
-        donor.select_donor(values)
-        # donor.insert_donor((self.entrada_cpf_doador.text(), self.entrada_nome_doador.text(), self.entrada_email_doador.text(), self.box_sexo_doador.currentText(),data_doador,self.box_tiposanguineo_doador.currentText()),(self.entrada_cpf_doador.text(),self.entrada_rua_doador.text(), self.entrada_numero_doador.text(),self.entrada_complemento_doador.text()),((self.entrada_cpf_doador.text(), self.entrada_telefone_doador.text()),(self.entrada_cpf_doador.text(),self.entrada_celular_doador.text())))
-        # values = donor.create_dictionary((self.entrada_cpf_doador.text(), self.entrada_nome_doador.text(), self.entrada_email_doador.text(), self.box_sexo_doador.currentText(),sale_date.__str__(),self.box_tiposanguineo_doador.currentText()))
-        # donor.select_donor(values)
-        self.emptyDoadorForms()
+        self.botao_pesquisar_doacao.clicked.connect(self.getDoacaoPesquisaForms)
+        self.botao_pesquisar_funcionario.clicked.connect(self.getFuncionarioPesquisaForms)
+        self.botao_pesquisar_hospital.clicked.connect(self.getHospitalPesquisaForms)
+        self.botao_pesquisar_pedido.clicked.connect(self.getPedidoPesquisaForms)
 
     def getDoadorPesquisaForms(self):
         checkboxList = []
         # checkboxList.append(True) if self.checkbox_todos_doador.checkState() else checkboxList.append(False)
         if not self.checkbox_todos_doador.checkState():
-            checkboxList.append(False)
             checkboxList.append(True) if self.checkbox_cpf_doador.checkState() else checkboxList.append(False)
             checkboxList.append(True) if self.checkbox_nome_doador.checkState() else checkboxList.append(False)
             checkboxList.append(True) if self.checkbox_email_doador.checkState() else checkboxList.append(False)
@@ -47,12 +40,91 @@ class NewWindow(QMainWindow):
             checkboxList.append(True) if self.checkbox_complemento_doador.checkState() else checkboxList.append(False)
             checkboxTuple = tuple(checkboxList)
         else:
-            checkboxTuple = (True,True,True,True,True,True,True,True,True,True,True)
+            checkboxTuple = (True,True,True,True,True,True,True,True,True,True)
         pesquisa_data_doador = self.dateToString(self.pesquisa_data_doador.text())
         fields = donor.create_dictionary_fields (checkboxTuple)
         values = donor.create_dictionary((self.pesquisa_cpf_doador.text(), self.pesquisa_nome_doador.text(), self.pesquisa_email_doador.text(), self.pesquisa_box_sexo_doador.currentText(),pesquisa_data_doador,self.pesquisa_box_tiposanguineo_doador.currentText()))
         result = donor.select_donor(fields,values)
         self.displayTable(result)
+
+    def getDoacaoPesquisaForms(self):
+        checkboxList = []
+
+        if not self.checkbox_todos_doacao.checkState():
+            checkboxList.append(True) if self.checkbox_cpf_doador_doacao.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_cpf_enfermeiro_doacao.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_data_doacao.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_quantidade_doacao.checkState() else checkboxList.append(False)
+            checkboxTuple = tuple(checkboxList)
+        else:
+            checkboxTuple = (True,True,True,True)
+        fields = donation.create_dictionary_fields (checkboxTuple)
+        values = donation.create_dictionary((self.pesquisa_cpf_doador_doacao.text(), self.pesquisa_cpf_enfermeiro_doacao.text(), self.pesquisa_data_doacao.text(), self.pesquisa_quantidade_doacao.text()))
+        result = donation.select_donation(fields,values)
+        self.displayTable(result)
+
+    def getFuncionarioPesquisaForms(self):
+        checkboxList = []
+        if not self.checkbox_todos_funcionario.checkState():
+            checkboxList.append(True) if self.checkbox_cpf_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_nome_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_email_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_sexo_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_data_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_salario_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_cargo_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_coren_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_cofen_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_telefone_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_rua_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_numero_funcionario.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_complemento_funcionario.checkState() else checkboxList.append(False)
+            checkboxTuple = tuple(checkboxList)
+        else:
+            checkboxTuple = (True,True,True,True,True,True,True,True,True,True,True,True,True)
+        pesquisa_data_funcionario = self.dateToString(self.pesquisa_data_funcionario.text())
+        fields = employee.create_dictionary_fields (checkboxTuple)
+        values = employee.create_dictionary((self.pesquisa_cpf_funcionario.text(), self.pesquisa_nome_funcionario.text(), self.pesquisa_email_funcionario.text(), self.pesquisa_box_sexo_funcionario.currentText(),pesquisa_data_funcionario,self.pesquisa_salario_funcionario.text(),self.pesquisa_cargo_funcionario.text()))
+        result = employee.select_employee(fields,values)
+        self.displayTable(result)
+
+
+    def getHospitalPesquisaForms(self):
+        checkboxList = []
+        if not self.checkbox_todos_hospital.checkState():
+            checkboxList.append(True) if self.checkbox_nome_hospital.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_email_hospital.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_telefone_hospital.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_rua_hospital.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_numero_hospital.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_complemento_hospital.checkState() else checkboxList.append(False)
+            checkboxTuple = tuple(checkboxList)
+        else:
+            checkboxTuple = (True,True,True,True,True,True)
+        print(checkboxTuple)
+        fields = hospital.create_dictionary_fields (checkboxTuple)
+        print(f"fields = {fields}")
+        values = hospital.create_dictionary((self.pesquisa_nome_hospital.text(), self.pesquisa_email_hospital.text()))
+        result = hospital.select_hospital(fields,values)
+        self.displayTable(result)
+
+    def getPedidoPesquisaForms(self):
+        checkboxList = []
+        # checkboxList.append(True) if self.checkbox_todos_doador.checkState() else checkboxList.append(False)
+        if not self.checkbox_todos_pedido.checkState():
+            checkboxList.append(True) if self.checkbox_nome_pedido.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_quantidade_pedido.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_tiposanguineo_pedido.checkState() else checkboxList.append(False)
+            checkboxList.append(True) if self.checkbox_data_pedido.checkState() else checkboxList.append(False)
+            checkboxTuple = tuple(checkboxList)
+        else:
+            checkboxTuple = (True,True,True,True,True,True,True,True,True,True)
+        pesquisa_data_pedido = self.dateToString(self.pesquisa_data_pedido.text())
+        fields = order.create_dictionary_fields (checkboxTuple)
+        values = order.create_dictionary((self.pesquisa_nome_pedido.text(),self.pesquisa_quantidade_pedido.text(),self.pesquisa_box_tiposanguineo_pedido.currentText(),pesquisa_data_pedido))
+        result = order.select_order(fields,values)
+        self.displayTable(result)
+            
 
 
     def displayTable(self,results):
@@ -60,40 +132,51 @@ class NewWindow(QMainWindow):
         self.dialog.loadData(results)
         self.dialog.show()
 
-            
+############################################################# INSERCOES ###################################################################################
+
+    def getDoadorForms(self):
+        data_doador = self.dateToString(self.entrada_data_doador.text())
+        donor.insert_donor((self.entrada_cpf_doador.text(), self.entrada_nome_doador.text(), self.entrada_email_doador.text(), self.box_sexo_doador.currentText(),data_doador,self.box_tiposanguineo_doador.currentText()),(self.entrada_cpf_doador.text(),self.entrada_rua_doador.text(), self.entrada_numero_doador.text(),self.entrada_complemento_doador.text()),((self.entrada_cpf_doador.text(), self.entrada_telefone_doador.text()),(self.entrada_cpf_doador.text(),self.entrada_celular_doador.text())))
+        self.emptyDoadorForms()
+        self.successMessage("Doador inserido com sucesso")    
         
     def getDoacaoForms(self):
         data_doacao = self.dateToString(self.entrada_data_doacao.text())
-        print((self.entrada_cpf_doacao.text(),self.entrada_cpf_enfermeiro_doacao.text(),data_doacao,self.entrada_quantidade_doacao.text()))
+        donation.insert_donation((self.entrada_cpf_doacao.text(),self.entrada_cpf_enfermeiro_doacao.text(),data_doacao,self.entrada_quantidade_doacao.text()))
         self.emptyDoacaoForms()
         self.successMessage("Doação inserida com sucesso")
 
     def getFuncionarioForms(self):
         data_funcionario = self.dateToString(self.entrada_data_funcionario.text())
-        print((self.entrada_cpf_funcionario.text(),self.entrada_nome_funcionario.text(), self.entrada_email_funcionario.text(),self.box_sexo_funcionario.currentText(),data_funcionario,float(self.entrada_salario_funcionario.text()),self.entrada_cargo_funcionario.text()), (self.entrada_cpf_funcionario.text(),self.entrada_rua_funcionario.text(),self.entrada_numero_funcionario.text(),self.entrada_complemento_funcionario.text()),((self.entrada_cpf_funcionario.text(),self.entrada_celular_funcionario.text()),(self.entrada_cpf_funcionario.text(),self.entrada_telefone_funcionario.text())))
+        employee.insert_employee((self.entrada_cpf_funcionario.text(),self.entrada_nome_funcionario.text(), self.entrada_email_funcionario.text(),self.box_sexo_funcionario.currentText(),data_funcionario,float(self.entrada_salario_funcionario.text()),self.entrada_cargo_funcionario.text()), (self.entrada_cpf_funcionario.text(),self.entrada_rua_funcionario.text(),self.entrada_numero_funcionario.text(),self.entrada_complemento_funcionario.text()),((self.entrada_cpf_funcionario.text(),self.entrada_celular_funcionario.text()),(self.entrada_cpf_funcionario.text(),self.entrada_telefone_funcionario.text())))
         self.emptyFuncionarioForms()
+        self.successMessage("Funcionário inserido com sucesso")
 
     def getEnfermeiroForms(self):
         data_enfermeiro = self.dateToString(self.entrada_data_enfermeiro.text())
-        print((self.entrada_cpf_enfermeiro.text(),self.entrada_nome_enfermeiro.text(), self.entrada_email_enfermeiro.text(),self.box_sexo_enfermeiro.currentText(),data_enfermeiro,float(self.entrada_salario_enfermeiro.text()),self.entrada_coren_enfermeiro.text(),self.entrada_cofen_enfermeiro.text()), (self.entrada_cpf_enfermeiro.text(),self.entrada_rua_enfermeiro.text(),self.entrada_numero_enfermeiro.text(),self.entrada_complemento_enfermeiro.text()),((self.entrada_cpf_enfermeiro.text(),self.entrada_celular_enfermeiro.text()),(self.entrada_cpf_enfermeiro.text(),self.entrada_telefone_enfermeiro.text())))
+        employee.insert_nurse((self.entrada_cpf_enfermeiro.text(),self.entrada_nome_enfermeiro.text(), self.entrada_email_enfermeiro.text(),self.box_sexo_enfermeiro.currentText(),data_enfermeiro,float(self.entrada_salario_enfermeiro.text())),(self.entrada_cpf_enfermeiro.text(),self.entrada_coren_enfermeiro.text(),self.entrada_cofen_enfermeiro.text()), (self.entrada_cpf_enfermeiro.text(),self.entrada_rua_enfermeiro.text(),self.entrada_numero_enfermeiro.text(),self.entrada_complemento_enfermeiro.text()),((self.entrada_cpf_enfermeiro.text(),self.entrada_celular_enfermeiro.text()),(self.entrada_cpf_enfermeiro.text(),self.entrada_telefone_enfermeiro.text())))
         self.emptyEnfermeiroForms()
+        self.successMessage("Enfermeiro inserido com sucesso")
 
     def getAdminForms(self):
         data_admin = self.dateToString(self.entrada_data_admin.text())
-        print((self.entrada_cpf_admin.text(),self.entrada_nome_admin.text(), self.entrada_email_admin.text(),self.box_sexo_admin.currentText(),data_admin,float(self.entrada_salario_admin.text()),self.entrada_usuario_admin.text(),self.entrada_senha_admin.text()), (self.entrada_cpf_admin.text(),self.entrada_rua_admin.text(),self.entrada_numero_admin.text(),self.entrada_complemento_admin.text()),((self.entrada_cpf_admin.text(),self.entrada_celular_admin.text()),(self.entrada_cpf_admin.text(),self.entrada_telefone_admin.text())))
+        employee.insert_manager((self.entrada_cpf_admin.text(),self.entrada_nome_admin.text(), self.entrada_email_admin.text(),self.box_sexo_admin.currentText(),data_admin,float(self.entrada_salario_admin.text())),(self.entrada_cpf_admin.text(),self.entrada_usuario_admin.text(),self.entrada_senha_admin.text()), (self.entrada_cpf_admin.text(),self.entrada_rua_admin.text(),self.entrada_numero_admin.text(),self.entrada_complemento_admin.text()),((self.entrada_cpf_admin.text(),self.entrada_celular_admin.text()),(self.entrada_cpf_admin.text(),self.entrada_telefone_admin.text())))
         self.emptyAdminForms()
+        self.successMessage("Administrador inserido com sucesso")
 
     def getHospitalForms(self):
-        #getHospitalIdByName(self.entrada_nome_admin.text())
-        hospitalId = 1
-        print((hospitalId, self.entrada_email_hospital.text()), (hospitalId,self.entrada_rua_hospital.text(),self.entrada_numero_hospital.text(),self.entrada_complemento_hospital.text()),((hospitalId,self.entrada_celular_hospital.text()),(hospitalId,self.entrada_telefone_hospital.text())))
+        hospital.insert_hospital((self.entrada_nome_hospital.text(),self.entrada_email_hospital.text()), [self.entrada_rua_hospital.text(),self.entrada_numero_hospital.text(),self.entrada_complemento_hospital.text()],([self.entrada_celular_hospital.text()],[self.entrada_telefone_hospital.text()]))
         self.emptyHospitalForms()
+        self.successMessage("Hospital inserido com sucesso")
     
     def getPedidoForms(self):
         orderTuple = order.create_tuple(self.entrada_hospital_pedido.text(),[self.entrada_quantidade_pedido.text(),self.box_tiposanguineo_pedido.currentText()])
         order.insert_order(orderTuple)
         self.emptyPedidoForms()
+        self.successMessage("Pedido inserido com sucesso")
 
+
+############################################################# LIMPA OS CAMPOS ###################################################################################
 
     def emptyDoadorForms(self):
         self.entrada_cpf_doador .clear()
@@ -172,6 +255,9 @@ class NewWindow(QMainWindow):
         self.entrada_quantidade_pedido.clear()
         self.box_tiposanguineo_pedido.clear()
 
+
+##############################################################################################################################################################
+
     def dateToString(self,dateTime):
         if dateTime != None:
             if dateTime != '':
@@ -201,18 +287,7 @@ class TableWindow(QDialog):
     def __init__(self, parent= None):
         super(QDialog, self).__init__(parent)
         loadUi("HemocentroBD/table2.ui",self)
-        # self.tableWidget.setColumnWidth(0, 250)
-        # self.tableWidget.setColumnWidth(1, 100)
-        # self.tableWidget.setColumnWidth(2, 350)
-        # self.tableWidget.setHorizontalHeaderLabels(["City","Country","Subcountry"])
-        # self.loaddata()
 
-    # def loadData(self,cursor):
-    #     num_fields = len(cursor.description)
-    #     field_names = [i[0] for i in cursor.description]
-    #     model = QtGui.QStandardItemModel()
-    #     model.setHorizontalHeaderLabels(field_names)
-    #     self.tableView.setModel(model)
 
     def loadData(self,results):
         data = results[0]
@@ -220,12 +295,10 @@ class TableWindow(QDialog):
         lenHeaders = len(headers)
         self.tableWidget.setColumnCount(lenHeaders)
         self.tableWidget.setHorizontalHeaderLabels(headers)
-        # self.tableWidget.setItem(0,0, QtWidgets.QTableWidgetItem("teste"))
         index = 0
         self.tableWidget.setRowCount(len(data))
         for row in data:
             for column in range(0,lenHeaders):
-                value = row[column]
                 self.tableWidget.setItem(index,column,QtWidgets.QTableWidgetItem(row[column].__str__()))
             index += 1
 

@@ -3,32 +3,41 @@ from database import cursor, db
 def insert_hospital (hospital_values,address_values,number_values):
     cursor.execute("INSERT INTO Hospital (Nome, Email) VALUES %s" % (hospital_values,))
     db.commit()
-    insert_address(address_values)
-    insert_number(number_values)
-    insert_cellphone(number_values)
+    insert_address(hospital_values[0],address_values)
+    insert_number(hospital_values[0],number_values)
+    insert_cellphone(hospital_values[0],number_values)
     return True
 
-def insert_address (address_values):
-    cursor.execute("INSERT INTO Endereco_Hospital VALUES %s" % (address_values,))
+def insert_address (nome_hospital,address_values):
+    id_hospital = select_ID(nome_hospital)
+    address_values.append(id_hospital)
+    address_tuple = tuple(address_values)
+    cursor.execute("INSERT INTO Endereco_Hospital (Rua,Numero,Complemento,ID_Hospital) VALUES %s" % (address_tuple,))
     db.commit()
     return True
 
-def insert_cellphone (number_values):
-    if(number_values[0][1]!= ''):
-        cursor.execute("INSERT INTO Telefones_Hospital VALUES %s" % (number_values[0],))
+def insert_cellphone (nome_hospital,number_values):
+    if(number_values[0][0]!= ''):
+        id_hospital = select_ID(nome_hospital)
+        number_values[0].append(id_hospital)
+        number_tuple = tuple(number_values[0])
+        cursor.execute("INSERT INTO Telefones_Hospital (Numero,ID_Hospital) VALUES %s" % (number_tuple,))
         db.commit()
     return True
 
-def insert_number (number_values):
-    if(number_values[1][1]!= ''):
-        cursor.execute("INSERT INTO Telefones_Hospital VALUES %s" % (number_values[1],))
+def insert_number (nome_hospital,number_values):
+    if(number_values[1][0]!= ''):
+        id_hospital = select_ID(nome_hospital)
+        number_values[1].append(id_hospital)
+        number_tuple = tuple(number_values[1])
+        cursor.execute("INSERT INTO Telefones_Hospital (Numero,ID_Hospital) VALUES %s" % (number_tuple,))
         db.commit()
     return True
 
 ############################################ PESQUISAS ################################################
 
 def select_ID (nome):
-    cursor.execute(f"SELECT ID_Hospital FROM Hospital WHERE Nome='{nome}'")
+    cursor.execute(f"SELECT ID_Hospital FROM Hospital WHERE Nome = '{nome}'")
     for client in cursor:
         return client[0]
 
@@ -70,9 +79,9 @@ def create_string_fields (dictionary):
             string += f"h.Email"
     if (dictionary['NumerosTelefone'] == True):
         if (string != ''):
-            string += f",GROUP_CONCAT(t.NumerosTelefone) as NumerosTelefone"
+            string += f",GROUP_CONCAT(t.Numero) as NumerosTelefone"
         else:
-            string += f"GROUP_CONCAT(t.NumerosTelefone)"
+            string += f"GROUP_CONCAT(t.Numero) as NumeroTelefone"
     if (dictionary['Rua'] == True):
         if (string != ''):
             string += f",e.Rua"
@@ -91,10 +100,9 @@ def create_string_fields (dictionary):
     return string
 
 def select_hospital (fields,values):
-    cursor.execute(f"SELECT {fields} FROM HOSPITAL as H INNER JOIN Telefones_Hospital AS t ON t.ID_Hospital = h.ID_Hospital INNER JOIN Endereco_Hospital AS e ON e.ID_Hospital = h.ID_Hospital WHERE {values} GROUP BY h.ID_Hospital")
+    cursor.execute(f"SELECT {fields} FROM HOSPITAL as H LEFT OUTER JOIN Telefones_Hospital AS t ON t.ID_Hospital = h.ID_Hospital LEFT OUTER JOIN Endereco_Hospital AS e ON e.ID_Hospital = h.ID_Hospital WHERE {values} GROUP BY h.ID_Hospital")
+    field_names = [i[0] for i in cursor.description]
+    results = []
     for client in cursor:
-        num_campos = len(client)
-        print(f"num campos cursor {len(cursor.description)}")
-        for i in range (0,num_campos):
-            print(client[i])
-        # return client[0]
+        results.append(client)
+    return (results,field_names)

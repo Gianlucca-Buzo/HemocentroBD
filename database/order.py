@@ -80,17 +80,24 @@ def create_string_fields (dictionary):
 
 def select_order (fields,values):
     cursor.execute(f"SELECT {fields} FROM Pedido AS p INNER JOIN Hospital AS h ON h.ID_Hospital=p.ID_Hospital WHERE {values}")
+    field_names = [i[0] for i in cursor.description]
+    results = []
     for client in cursor:
-        num_campos = len(client)
-        for i in range (0,num_campos):
-            print(client[i])
-        # return client[0]  
+        results.append(client)
+    return (results,field_names)
 
 def select():
     cursor.execute(f"SELECT * FROM Pedido")
+    field_names = [i[0] for i in cursor.description]
+    results = []
     for client in cursor:
-        num_campos = len(client)
-        for i in range (0,num_campos):
-            print(client[i])
+        results.append(client)
+    return (results,field_names)
 
+def select_for_transaction (id_pedido):
+    cursor.execute(f"SELECT TipoSanguineo,Quantidade FROM Pedido WHERE ID_Pedido = {id_pedido}")
+    results = []
+    for row in cursor:
+        results.append(row)
+    return (results)
 

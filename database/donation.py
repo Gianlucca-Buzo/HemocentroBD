@@ -1,8 +1,14 @@
-from database import cursor, db, stock
+from database import cursor, db, stock, donor
 
 def insert_donation (donation_values):
     cursor.execute("INSERT INTO Doacao (ID_Doador,ID_Enfermeiro,DataDoacao,Quantidade) VALUES %s" % (donation_values,))
     db.commit()
+    update_stock(donation_values)
+    return True
+
+def update_stock (donation_values):
+    tipoSanguineo = donor.select_tipoSanguineo (donation_values[0])
+    stock.update(tipoSanguineo,donation_values[3])
     return True
 
 ############################################ PESQUISAS ################################################
@@ -66,8 +72,8 @@ def create_string_fields (dictionary):
 
 def select_donation (fields,values):
     cursor.execute(f"SELECT {fields} FROM Doacao WHERE {values}")
+    field_names = [i[0] for i in cursor.description]
+    results = []
     for client in cursor:
-        num_campos = len(client)
-        for i in range (0,num_campos):
-            print(client[i])
-        # return client[0]
+        results.append(client)
+    return (results,field_names)

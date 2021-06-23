@@ -1,8 +1,14 @@
-from database import cursor, db   
+from database import cursor, db, order, stock
 
 def insert_transaction (transaction_values):
     cursor.execute("INSERT INTO Transacao (ID_Pedido,DataTransacao) VALUES %s" % (transaction_values,))
     db.commit()
+    update_stock(transaction_values)
+    return True
+
+def update_stock(transaction_values):
+    results = order.select_for_transaction(transaction_values[0])
+    stock.update(results[0],-(results[1]))
     return True
 
 ############################################ PESQUISAS ################################################
@@ -42,8 +48,8 @@ def create_string_fields (dictionary):
 
 def select_order (fields,values):
     cursor.execute(f"SELECT {fields} FROM Transacao WHERE {values}")
+    field_names = [i[0] for i in cursor.description]
+    results = []
     for client in cursor:
-        num_campos = len(client)
-        for i in range (0,num_campos):
-            print(client[i])
-        # return client[0]  
+        results.append(client)
+    return (results,field_names)

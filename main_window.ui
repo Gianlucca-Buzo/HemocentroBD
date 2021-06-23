@@ -17,14 +17,14 @@
    <widget class="QTabWidget" name="main_tabs">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>0</y>
       <width>831</width>
       <height>491</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab_clients">
      <attribute name="title">
@@ -857,46 +857,7 @@
        <attribute name="title">
         <string>Pesquisar</string>
        </attribute>
-       <widget class="QPushButton" name="tr_button_sale_3">
-        <property name="geometry">
-         <rect>
-          <x>530</x>
-          <y>130</y>
-          <width>171</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Adicionar Venda</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>30</y>
-          <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CheckBox</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox_2">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>60</y>
-          <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CheckBox</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox_3">
+       <widget class="QCheckBox" name="checkbox_todos_doacao">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -906,223 +867,164 @@
          </rect>
         </property>
         <property name="text">
-         <string>CheckBox</string>
+         <string>Todos</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox_4">
+       <widget class="QLineEdit" name="pesquisa_data_doacao">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>180</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="botao_pesquisar_doacao">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>280</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_cpf_doador_doacao">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>100</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_31">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>180</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Data da Doação</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_36">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>140</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CPF Enfermeiro</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_34">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>100</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CPF Doador</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_cpf_enfermeiro_doacao">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>140</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_cpf_doador_doacao">
         <property name="geometry">
          <rect>
           <x>20</x>
           <y>120</y>
-          <width>81</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>CheckBox</string>
+         <string>CPF Doador</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox_5">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>150</y>
-          <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CheckBox</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox_6">
+       <widget class="QCheckBox" name="checkbox_data_doacao">
         <property name="geometry">
          <rect>
           <x>20</x>
           <y>180</y>
-          <width>81</width>
+          <width>141</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>CheckBox</string>
+         <string>Data da Doação</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox_7">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>210</y>
-          <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CheckBox</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox_8">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>240</y>
-          <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CheckBox</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox_9">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>270</y>
-          <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CheckBox</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox_10">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>300</y>
-          <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CheckBox</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>30</y>
-          <width>113</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_2">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>70</y>
-          <width>113</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_3">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>110</y>
-          <width>113</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_4">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>150</y>
-          <width>113</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_5">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>190</y>
-          <width>113</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_6">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>230</y>
-          <width>111</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_4">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>30</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Doador</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_6">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>70</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Doador</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_9">
+       <widget class="QLabel" name="label_clients_name_33">
         <property name="geometry">
          <rect>
           <x>220</x>
-          <y>130</y>
+          <y>220</y>
           <width>111</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>CPF Doador</string>
+         <string>Quantidade</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_13">
+       <widget class="QLineEdit" name="pesquisa_quantidade_doacao">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>160</y>
-          <width>111</width>
+          <x>340</x>
+          <y>220</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_cpf_enfermeiro_doacao">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>121</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>CPF Doador</string>
+         <string>CPF Enfermeiro</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_14">
+       <widget class="QCheckBox" name="checkbox_quantidade_doacao">
         <property name="geometry">
          <rect>
-          <x>230</x>
+          <x>20</x>
           <y>210</y>
-          <width>111</width>
+          <width>141</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>CPF Doador</string>
+         <string>Quantidade</string>
         </property>
        </widget>
       </widget>
@@ -1142,7 +1044,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_4">
        <attribute name="title">
@@ -2117,33 +2019,376 @@ Estoque</string>
        <attribute name="title">
         <string>Pesquisar</string>
        </attribute>
-       <widget class="QPushButton" name="tr_button_sale_4">
+       <widget class="QComboBox" name="pesquisa_box_sexo_funcionario">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>280</y>
-          <width>171</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Adicionar Venda</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_9">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>40</y>
+          <x>350</x>
+          <y>170</y>
           <width>86</width>
           <height>25</height>
          </rect>
         </property>
         <item>
          <property name="text">
-          <string>Cpf</string>
+          <string/>
          </property>
         </item>
+        <item>
+         <property name="text">
+          <string>M</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>F</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_email_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>130</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_cargo_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>230</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cargo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_39">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>210</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Data de Nascmineto</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_38">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>50</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CPF</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_salario_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>200</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Salário</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_40">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>90</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nome</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_nome_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>90</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_32">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>130</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_sexo_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>140</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Sexo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_37">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>170</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Sexo</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="botao_pesquisar_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>310</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_cpf_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CPF</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_email_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_coren_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>260</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Coren</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_cofen_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>290</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cofen</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_data_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>170</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Data de Nascimento</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_telefone_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>320</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Numeros de Telefone</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_cpf_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>50</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_nome_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nome</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_data_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>210</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_todos_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Todos</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_numero_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>50</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Número</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_complemento_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>80</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Complemento</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_rua_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>20</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Rua</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_41">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>240</y>
+          <width>51</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Salário</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_salario_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>240</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_42">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>270</y>
+          <width>51</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cargo</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_cargo_funcionario">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>270</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
        </widget>
       </widget>
      </widget>
@@ -2155,14 +2400,14 @@ Estoque</string>
      <widget class="QTabWidget" name="trips_tabs_5">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>30</y>
+        <x>10</x>
+        <y>10</y>
         <width>711</width>
         <height>411</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_5">
        <attribute name="title">
@@ -2350,33 +2595,155 @@ Estoque</string>
        <attribute name="title">
         <string>Pesquisar</string>
        </attribute>
-       <widget class="QPushButton" name="tr_button_sale_5">
+       <widget class="QPushButton" name="botao_pesquisar_hospital">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>280</y>
+          <x>320</x>
+          <y>210</y>
           <width>171</width>
           <height>51</height>
          </rect>
         </property>
         <property name="text">
-         <string>Adicionar Venda</string>
+         <string>Pesquisar</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_12">
+       <widget class="QCheckBox" name="checkbox_telefone_hospital">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>40</y>
-          <width>86</width>
-          <height>25</height>
+          <x>30</x>
+          <y>160</y>
+          <width>151</width>
+          <height>20</height>
          </rect>
         </property>
-        <item>
-         <property name="text">
-          <string>Cpf</string>
-         </property>
-        </item>
+        <property name="text">
+         <string>Numeros de Telefone</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_complemento_hospital">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>250</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Complemento</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_email_hospital">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>130</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_rua_hospital">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>190</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Rua</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_numero_hospital">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>220</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Número</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_nome_hospital">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>100</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nome</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_74">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>130</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_73">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>90</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nome</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_nome_hospital">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>90</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_email_hospital">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>130</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_todos_hospital">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>70</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Todos</string>
+        </property>
        </widget>
       </widget>
      </widget>
@@ -2389,13 +2756,13 @@ Estoque</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>30</y>
+        <y>10</y>
         <width>711</width>
         <height>411</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_6">
        <attribute name="title">
@@ -2528,33 +2895,220 @@ Estoque</string>
        <attribute name="title">
         <string>Pesquisar</string>
        </attribute>
-       <widget class="QPushButton" name="tr_button_sale_6">
+       <widget class="QCheckBox" name="checkbox_todos_pedido">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>280</y>
-          <width>171</width>
-          <height>51</height>
+          <x>40</x>
+          <y>100</y>
+          <width>81</width>
+          <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>Adicionar Venda</string>
+         <string>Todos</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_15">
+       <widget class="QCheckBox" name="checkbox_nome_pedido">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>40</y>
+          <x>40</x>
+          <y>130</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nome Hospital</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_quantidade_pedido">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>160</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Quantidade</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_data_pedido">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>220</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Data Pedido</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_tiposanguineo_pedido">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>190</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tipo Sanguíneo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_115">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>160</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tipo Sanguíneo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_114">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>80</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nome Hospital</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_nome_pedido">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>80</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_data_pedido">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>200</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="pesquisa_box_tiposanguineo_pedido">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>160</y>
           <width>86</width>
           <height>25</height>
          </rect>
         </property>
         <item>
          <property name="text">
-          <string>Cpf</string>
+          <string/>
          </property>
         </item>
+        <item>
+         <property name="text">
+          <string>A-</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>A+</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B+</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AB-</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AB+</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>O-</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>O+</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_113">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>200</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Data Pedido</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_157">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>120</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Quantidade</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_quantidade_pedido">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>120</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="botao_pesquisar_pedido">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>250</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
        </widget>
       </widget>
      </widget>

@@ -17,9 +17,9 @@ def insert_employee (employee_values,address_values,number_values):
         return False
 
 #Insere enfermeiro
-def insert_nurse (nurse_values,employee_values,address_values,number_values):
+def insert_nurse (employee_values,nurse_values,address_values,number_values):
     if not exists_employee(nurse_values[0]):
-        cursor.execute("INSERT INTO Funcionario VALUES %s" % (employee_values,))
+        cursor.execute("INSERT INTO Funcionario (CPF,Nome,Email,Sexo,DataNascimento,Salario) VALUES %s" % (employee_values,))
         cursor.execute("INSERT INTO Enfermeiro VALUES %s" % (nurse_values,))
         db.commit()
         insert_address(address_values)
@@ -30,9 +30,9 @@ def insert_nurse (nurse_values,employee_values,address_values,number_values):
         return False
 
 #Insere administrador
-def insert_manager (manager_values,employee_values,address_values,number_values):
+def insert_manager (employee_values,manager_values,address_values,number_values):
     if not exists_employee(manager_values[0]):
-        cursor.execute("INSERT INTO Funcionario VALUES %s" % (employee_values,))
+        cursor.execute("INSERT INTO Funcionario (CPF,Nome,Email,Sexo,DataNascimento,Salario) VALUES %s" % (employee_values,))
         cursor.execute("INSERT INTO Administrador VALUES %s" % (manager_values,))
         db.commit()
         insert_address(address_values)
@@ -197,10 +197,9 @@ def create_string_fields (dictionary):
     return string
 
 def select_employee (fields,values):
-    cursor.execute(f"SELECT {fields} FROM Funcionario as f INNER JOIN Telefones_Funcionario AS t ON t.CPF_Funcionario = f.CPF INNER JOIN Endereco_Funcionario AS e ON e.CPF_Funcionario = f.CPF INNER JOIN Enfermeiro AS enf ON enf.CPF_Funcionario = f.CPF WHERE {values} GROUP BY f.CPF")
-    return cursor
+    cursor.execute(f"SELECT {fields} FROM Funcionario as f LEFT OUTER JOIN Telefones_Funcionario AS t ON t.CPF_Funcionario = f.CPF LEFT OUTER JOIN Endereco_Funcionario AS e ON e.CPF_Funcionario = f.CPF LEFT OUTER JOIN Enfermeiro AS enf ON enf.CPF_Funcionario = f.CPF WHERE {values} GROUP BY f.CPF")
+    field_names = [i[0] for i in cursor.description]
+    results = []
     for client in cursor:
-        num_campos = len(client)
-        for i in range (0,num_campos):
-            print(client[i])
-        return client[0]
+        results.append(client)
+    return (results,field_names)
