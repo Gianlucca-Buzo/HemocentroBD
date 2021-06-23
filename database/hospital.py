@@ -5,6 +5,7 @@ def insert_hospital (hospital_values,address_values,number_values):
     db.commit()
     insert_address(address_values)
     insert_number(number_values)
+    insert_cellphone(number_values)
     return True
 
 def insert_address (address_values):
