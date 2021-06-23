@@ -100,7 +100,7 @@ def create_string_fields (dictionary):
     return string
 
 def select_hospital (fields,values):
-    cursor.execute(f"SELECT {fields} FROM HOSPITAL as H LEFT OUTER JOIN Telefones_Hospital AS t ON t.ID_Hospital = h.ID_Hospital LEFT OUTER JOIN Endereco_Hospital AS e ON e.ID_Hospital = h.ID_Hospital WHERE {values} GROUP BY h.ID_Hospital")
+    cursor.execute(f"SELECT {fields} FROM HOSPITAL AS h LEFT OUTER JOIN Telefones_Hospital AS t ON t.ID_Hospital = h.ID_Hospital LEFT OUTER JOIN Endereco_Hospital AS e ON e.ID_Hospital = h.ID_Hospital WHERE {values} GROUP BY h.ID_Hospital")
     field_names = [i[0] for i in cursor.description]
     results = []
     for client in cursor:
