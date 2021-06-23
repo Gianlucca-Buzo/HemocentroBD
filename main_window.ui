@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>988</width>
-    <height>550</height>
+    <width>846</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,14 @@
    <widget class="QTabWidget" name="main_tabs">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
-      <width>831</width>
+      <width>851</width>
       <height>491</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_clients">
      <attribute name="title">
@@ -33,8 +33,8 @@
      <widget class="QTabWidget" name="trips_tabs_2">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>30</y>
+        <x>60</x>
+        <y>20</y>
         <width>711</width>
         <height>411</height>
        </rect>
@@ -49,7 +49,7 @@
        <widget class="QLabel" name="label_clients_name">
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>60</x>
           <y>10</y>
           <width>67</width>
           <height>17</height>
@@ -62,7 +62,7 @@
        <widget class="QLabel" name="label_clients_phone">
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>60</x>
           <y>40</y>
           <width>67</width>
           <height>17</height>
@@ -75,7 +75,7 @@
        <widget class="QLabel" name="label_clients_address">
         <property name="geometry">
          <rect>
-          <x>120</x>
+          <x>60</x>
           <y>70</y>
           <width>67</width>
           <height>17</height>
@@ -88,8 +88,8 @@
        <widget class="QPushButton" name="botao_adicionar_doador">
         <property name="geometry">
          <rect>
-          <x>480</x>
-          <y>240</y>
+          <x>500</x>
+          <y>280</y>
           <width>171</width>
           <height>61</height>
          </rect>
@@ -101,7 +101,7 @@
        <widget class="QLabel" name="label_clients_company">
         <property name="geometry">
          <rect>
-          <x>110</x>
+          <x>60</x>
           <y>100</y>
           <width>67</width>
           <height>17</height>
@@ -114,7 +114,7 @@
        <widget class="QLabel" name="label_clients_email">
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>60</x>
           <y>160</y>
           <width>141</width>
           <height>20</height>
@@ -133,6 +133,9 @@
           <height>21</height>
          </rect>
         </property>
+        <property name="text">
+         <string/>
+        </property>
        </widget>
        <widget class="QLineEdit" name="entrada_nome_doador">
         <property name="geometry">
@@ -147,7 +150,7 @@
        <widget class="QLabel" name="label_clients_email_3">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>60</x>
           <y>130</y>
           <width>121</width>
           <height>20</height>
@@ -190,7 +193,7 @@
        <widget class="QLabel" name="label_clients_name_8">
         <property name="geometry">
          <rect>
-          <x>90</x>
+          <x>60</x>
           <y>220</y>
           <width>91</width>
           <height>17</height>
@@ -203,7 +206,7 @@
        <widget class="QLabel" name="label_clients_name_5">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>60</x>
           <y>190</y>
           <width>91</width>
           <height>17</height>
@@ -239,7 +242,7 @@
        <widget class="QLabel" name="label_clients_email_5">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>60</x>
           <y>280</y>
           <width>121</width>
           <height>20</height>
@@ -262,7 +265,7 @@
        <widget class="QLabel" name="label_clients_email_6">
         <property name="geometry">
          <rect>
-          <x>110</x>
+          <x>60</x>
           <y>250</y>
           <width>121</width>
           <height>20</height>
@@ -275,7 +278,7 @@
        <widget class="QLabel" name="label_clients_email_4">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>60</x>
           <y>310</y>
           <width>121</width>
           <height>20</height>
@@ -296,6 +299,11 @@
         </property>
         <item>
          <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>M</string>
          </property>
         </item>
@@ -314,6 +322,11 @@
           <height>25</height>
          </rect>
         </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
         <item>
          <property name="text">
           <string>A-</string>
@@ -383,38 +396,12 @@
          <string>Tipo Sanguíneo</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_15">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>80</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nome</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_16">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>120</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Email</string>
-        </property>
-       </widget>
        <widget class="QCheckBox" name="checkbox_data_doador">
         <property name="geometry">
          <rect>
           <x>30</x>
           <y>160</y>
-          <width>141</width>
+          <width>151</width>
           <height>20</height>
          </rect>
         </property>
@@ -422,23 +409,10 @@
          <string>Data de Nascimento</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_17">
-        <property name="geometry">
-         <rect>
-          <x>290</x>
-          <y>40</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="pesquisa_nome_doador">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>420</x>
           <y>80</y>
           <width>161</width>
           <height>22</height>
@@ -474,7 +448,7 @@
        <widget class="QLineEdit" name="pesquisa_cpf_doador">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>420</x>
           <y>40</y>
           <width>161</width>
           <height>22</height>
@@ -497,24 +471,11 @@
        <widget class="QLineEdit" name="pesquisa_data_doador">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>420</x>
           <y>200</y>
           <width>161</width>
           <height>22</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_18">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>200</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Data de Nascmineto</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="checkbox_cpf_doador">
@@ -546,7 +507,7 @@
        <widget class="QLineEdit" name="pesquisa_email_doador">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>420</x>
           <y>120</y>
           <width>161</width>
           <height>22</height>
@@ -558,7 +519,7 @@
          <rect>
           <x>30</x>
           <y>310</y>
-          <width>81</width>
+          <width>111</width>
           <height>20</height>
          </rect>
         </property>
@@ -605,36 +566,10 @@
          <string>Números de telefone</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_19">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>160</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Sexo</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_26">
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>240</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Tipo Sanguíneo</string>
-        </property>
-       </widget>
        <widget class="QComboBox" name="pesquisa_box_tiposanguineo_doador">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>420</x>
           <y>240</y>
           <width>86</width>
           <height>25</height>
@@ -689,7 +624,7 @@
        <widget class="QComboBox" name="pesquisa_box_sexo_doador">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>420</x>
           <y>160</y>
           <width>86</width>
           <height>25</height>
@@ -724,6 +659,60 @@
          <string>Todos</string>
         </property>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>30</y>
+          <width>125</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_clients_name_17">
+           <property name="text">
+            <string>CPF</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_15">
+           <property name="text">
+            <string>Nome</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_16">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_19">
+           <property name="text">
+            <string>Sexo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_18">
+           <property name="text">
+            <string>Data de Nascmineto</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_26">
+           <property name="text">
+            <string>Tipo Sanguíneo</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -734,8 +723,8 @@
      <widget class="QTabWidget" name="trips_tabs_3">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
+        <x>60</x>
+        <y>20</y>
         <width>711</width>
         <height>411</height>
        </rect>
@@ -747,50 +736,11 @@
        <attribute name="title">
         <string>Adicionar</string>
        </attribute>
-       <widget class="QLabel" name="label_clients_name_2">
-        <property name="geometry">
-         <rect>
-          <x>66</x>
-          <y>130</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Doador</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_phone_2">
-        <property name="geometry">
-         <rect>
-          <x>66</x>
-          <y>160</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Enfermeiro</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_data_doacao">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>190</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Data</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="botao_adicionar_doacao">
         <property name="geometry">
          <rect>
-          <x>460</x>
-          <y>150</y>
+          <x>500</x>
+          <y>280</y>
           <width>171</width>
           <height>61</height>
          </rect>
@@ -799,24 +749,11 @@
          <string>Adicionar Doação</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_email_2">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>220</y>
-          <width>141</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Quantidade</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_cpf_doacao">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>130</y>
+          <x>200</x>
+          <y>100</y>
           <width>211</width>
           <height>21</height>
          </rect>
@@ -825,8 +762,8 @@
        <widget class="QLineEdit" name="entrada_cpf_enfermeiro_doacao">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>160</y>
+          <x>200</x>
+          <y>130</y>
           <width>211</width>
           <height>21</height>
          </rect>
@@ -835,8 +772,8 @@
        <widget class="QLineEdit" name="entrada_data_doacao">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>190</y>
+          <x>200</x>
+          <y>160</y>
           <width>211</width>
           <height>21</height>
          </rect>
@@ -845,12 +782,52 @@
        <widget class="QLineEdit" name="entrada_quantidade_doacao">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>220</y>
+          <x>200</x>
+          <y>190</y>
           <width>211</width>
           <height>21</height>
          </rect>
         </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>100</y>
+          <width>97</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_clients_name_2">
+           <property name="text">
+            <string>CPF Doador</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_phone_2">
+           <property name="text">
+            <string>CPF Enfermeiro</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_data_doacao">
+           <property name="text">
+            <string>Data</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_2">
+           <property name="text">
+            <string>Quantidade</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tr_sales_tab_3">
@@ -873,8 +850,8 @@
        <widget class="QLineEdit" name="pesquisa_data_doacao">
         <property name="geometry">
          <rect>
-          <x>340</x>
-          <y>180</y>
+          <x>400</x>
+          <y>160</y>
           <width>161</width>
           <height>22</height>
          </rect>
@@ -883,8 +860,8 @@
        <widget class="QPushButton" name="botao_pesquisar_doacao">
         <property name="geometry">
          <rect>
-          <x>420</x>
-          <y>280</y>
+          <x>490</x>
+          <y>260</y>
           <width>171</width>
           <height>51</height>
          </rect>
@@ -896,57 +873,18 @@
        <widget class="QLineEdit" name="pesquisa_cpf_doador_doacao">
         <property name="geometry">
          <rect>
-          <x>340</x>
-          <y>100</y>
+          <x>400</x>
+          <y>80</y>
           <width>161</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_31">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>180</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Data da Doação</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_36">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>140</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Enfermeiro</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_34">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>100</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Doador</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="pesquisa_cpf_enfermeiro_doacao">
         <property name="geometry">
          <rect>
-          <x>340</x>
-          <y>140</y>
+          <x>400</x>
+          <y>120</y>
           <width>161</width>
           <height>22</height>
          </rect>
@@ -978,24 +916,11 @@
          <string>Data da Doação</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_33">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>220</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Quantidade</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="pesquisa_quantidade_doacao">
         <property name="geometry">
          <rect>
-          <x>340</x>
-          <y>220</y>
+          <x>400</x>
+          <y>200</y>
           <width>161</width>
           <height>22</height>
          </rect>
@@ -1027,6 +952,46 @@
          <string>Quantidade</string>
         </property>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>80</y>
+          <width>99</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_clients_name_34">
+           <property name="text">
+            <string>CPF Doador</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_36">
+           <property name="text">
+            <string>CPF Enfermeiro</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_31">
+           <property name="text">
+            <string>Data da Doação</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_33">
+           <property name="text">
+            <string>Quantidade</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -1037,14 +1002,14 @@
      <widget class="QTabWidget" name="trips_tabs_4">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>60</x>
         <y>20</y>
         <width>711</width>
         <height>411</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_4">
        <attribute name="title">
@@ -2400,8 +2365,8 @@ Estoque</string>
      <widget class="QTabWidget" name="trips_tabs_5">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
+        <x>60</x>
+        <y>20</y>
         <width>711</width>
         <height>411</height>
        </rect>
@@ -2755,8 +2720,8 @@ Estoque</string>
      <widget class="QTabWidget" name="trips_tabs_6">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>10</y>
+        <x>60</x>
+        <y>20</y>
         <width>711</width>
         <height>411</height>
        </rect>
@@ -3110,6 +3075,19 @@ Estoque</string>
          <string>Pesquisar</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="botao_pesquisar_pedido_2">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>330</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -3120,8 +3098,8 @@ Estoque</string>
      <widget class="QTabWidget" name="trips_tabs_7">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>30</y>
+        <x>50</x>
+        <y>20</y>
         <width>711</width>
         <height>411</height>
        </rect>
