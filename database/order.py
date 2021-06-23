@@ -31,7 +31,7 @@ def create_dictionary (order_values):
 def create_string (dictionary):
     string = ''
     if (dictionary['ID_Hospital'] != ''):
-        string += f"ID_Hospital = '{dictionary['ID_Hospital']}'"
+        string += f"p.ID_Hospital = {dictionary['ID_Hospital']}"
     if (dictionary['Quantidade'] != ''):
         if (string != ''):
             string += f" AND Quantidade = '{dictionary['Quantidade']}'"
