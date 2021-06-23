@@ -146,13 +146,13 @@ def create_string_fields (dictionary):
 
 def select_donor (fields,values):
     # print(f"SELECT * FROM Doador WHERE {values} INNER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF INNER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF ")
-    print(fields,values)
-    cursor.execute(f"SELECT {fields} FROM Doador as d INNER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF INNER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF WHERE {values} GROUP BY d.CPF")
+    # print(fields,values)
+    cursor.execute(f"SELECT {fields} FROM Doador as d LEFT OUTER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF LEFT OUTER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF WHERE {values} GROUP BY d.CPF")
     results = []
     field_names = [i[0] for i in cursor.description]
     for row in cursor:
         results.append(row)
-    return (results,field_names)
+        return (results,field_names)
     # for client in cursor:
     #     num_campos = len(client)
     #     print(f"num campos cursor {len(cursor.description)}")
