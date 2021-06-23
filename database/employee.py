@@ -29,9 +29,9 @@ def insert_nurse (nurse_values,employee_values,address_values,number_values):
     else:
         return False
 
-#Insere admini
+#Insere administrador
 def insert_manager (manager_values,employee_values,address_values,number_values):
-    if not exists_employee(employee_values[0]):
+    if not exists_employee(manager_values[0]):
         cursor.execute("INSERT INTO Funcionario VALUES %s" % (employee_values,))
         cursor.execute("INSERT INTO Administrador VALUES %s" % (manager_values,))
         db.commit()

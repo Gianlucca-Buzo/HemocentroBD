@@ -24,3 +24,8 @@ def insert_number (number_values):
         cursor.execute("INSERT INTO Telefones_Hospital VALUES %s" % (number_values[1],))
         db.commit()
     return True
+
+def select_ID (nome):
+    cursor.execute(f"SELECT ID_Hospital FROM Hospital WHERE Nome='{nome}'")
+    for client in cursor:
+        return client[0]
