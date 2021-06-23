@@ -44,7 +44,7 @@ def create_dictionary (donor_values):
                   'Email': donor_values[2],
                   'Sexo': donor_values[3],
                   'DataNascimento': donor_values[4],
-                  'TipoSanguineo': donor_values[5],
+                  'TipoSanguineo': donor_values[5]
                 }
     return create_string(dictionary)
 
@@ -79,8 +79,78 @@ def create_string (dictionary):
             string += f"TipoSanguineo = '{dictionary['TipoSanguineo']}'"
     return string
 
-def select_donor (values):
-    print(f"SELECT * FROM Doador WHERE {values}")
-    cursor.execute(f"SELECT * FROM Doador WHERE {values}")
+def create_dictionary_fields (donor_values):
+    dictionary = {'CPF': donor_values[0],
+                  'Nome': donor_values[1],
+                  'Email': donor_values[2],
+                  'Sexo': donor_values[3],
+                  'DataNascimento': donor_values[4],
+                  'TipoSanguineo': donor_values[5],
+                  'NumerosTelefone': donor_values[6],
+                  'Rua': donor_values[7],
+                  'Numero': donor_values[8],
+                  'Complemento': donor_values[9]
+                }
+    return create_string_fields(dictionary)
+
+def create_string_fields (dictionary):
+    string = ''
+    if (dictionary['CPF'] == True):
+        string += f"d.CPF"
+    if (dictionary['Nome'] == True):
+        if (string != ''):
+            string += f",d.Nome"
+        else:
+            string += f"d.Nome"
+    if (dictionary['Email'] == True):
+        if (string != ''):
+            string += f",d.Email"
+        else:
+            string += f"d.Email"
+    if (dictionary['Sexo'] == True):
+        if (string != ''):
+            string += f",d.Sexo"
+        else:
+            string += f"d.Sexo"
+    if (dictionary['DataNascimento'] == True):
+        if (string != ''):
+            string += f",d.DataNascimento"
+        else:
+            string += f"d.DataNascimento"
+    if (dictionary['TipoSanguineo'] == True):
+        if (string != ''):
+            string += f",d.TipoSanguineo"
+        else:
+            string += f"d.TipoSanguineo"
+    if (dictionary['NumerosTelefone'] == True):
+        if (string != ''):
+            string += f",GROUP_CONCAT(t.Numero) as NumerosTelefone"
+        else:
+            string += f"GROUP_CONCAT(t.Numero) as NumerosTelefone"
+    if (dictionary['Rua'] == True):
+        if (string != ''):
+            string += f",e.Rua"
+        else:
+            string += f"e.Rua"
+    if (dictionary['Numero'] == True):
+        if (string != ''):
+            string += f",e.Numero"
+        else:
+            string += f"e.Numero"
+    if (dictionary['Complemento'] == True):
+        if (string != ''):
+            string += f",e.Complemento"
+        else:
+            string += f"e.Complemento"
+    return string
+
+def select_donor (fields,values):
+    # print(f"SELECT * FROM Doador WHERE {values} INNER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF INNER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF ")
+    cursor.execute(f"SELECT {fields} FROM Doador as d INNER JOIN Telefones_Doador AS t ON t.CPF_Doador = d.CPF INNER JOIN Endereco_Doador AS e ON e.CPF_Doador = d.CPF WHERE {values}")
     for client in cursor:
-        return client[0]
+        num_campos = len(client)
+        print(f"num campos cursor {len(cursor.description)}")
+        for i in range (0,num_campos):
+            print(client[i])
+        # return client[0]
+
