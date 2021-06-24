@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_clients">
      <attribute name="title">
@@ -40,7 +40,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_2">
        <attribute name="title">
@@ -1015,45 +1015,6 @@
        <attribute name="title">
         <string>Adicionar Funcionário</string>
        </attribute>
-       <widget class="QLabel" name="label_clients_name_3">
-        <property name="geometry">
-         <rect>
-          <x>76</x>
-          <y>10</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Funcionário</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_phone_3">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>40</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nome</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_address_3">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>70</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Email</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="botao_adicionar_funcionario">
         <property name="geometry">
          <rect>
@@ -1067,38 +1028,12 @@
          <string>Adicionar Funcionário</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_company_3">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>100</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Sexo</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_11">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>130</y>
-          <width>141</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Data de Nascimento</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_cpf_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>10</y>
-          <width>211</width>
+          <x>203</x>
+          <y>11</y>
+          <width>201</width>
           <height>21</height>
          </rect>
         </property>
@@ -1106,9 +1041,9 @@
        <widget class="QLineEdit" name="entrada_nome_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>40</y>
-          <width>211</width>
+          <x>203</x>
+          <y>42</y>
+          <width>201</width>
           <height>21</height>
          </rect>
         </property>
@@ -1116,9 +1051,9 @@
        <widget class="QLineEdit" name="entrada_email_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>70</y>
-          <width>211</width>
+          <x>203</x>
+          <y>73</y>
+          <width>201</width>
           <height>21</height>
          </rect>
         </property>
@@ -1126,9 +1061,9 @@
        <widget class="QLineEdit" name="entrada_data_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>130</y>
-          <width>211</width>
+          <x>203</x>
+          <y>134</y>
+          <width>201</width>
           <height>21</height>
          </rect>
         </property>
@@ -1136,9 +1071,9 @@
        <widget class="QLineEdit" name="entrada_telefone_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>190</y>
-          <width>211</width>
+          <x>203</x>
+          <y>196</y>
+          <width>201</width>
           <height>21</height>
          </rect>
         </property>
@@ -1146,45 +1081,19 @@
        <widget class="QLineEdit" name="entrada_celular_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>220</y>
-          <width>211</width>
+          <x>203</x>
+          <y>227</y>
+          <width>201</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_10">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>220</y>
-          <width>91</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Celular</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_7">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>190</y>
-          <width>91</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Telefone Fixo</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="entrada_numero_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>310</y>
-          <width>211</width>
+          <x>203</x>
+          <y>320</y>
+          <width>201</width>
           <height>21</height>
          </rect>
         </property>
@@ -1192,9 +1101,9 @@
        <widget class="QLineEdit" name="entrada_rua_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>250</y>
-          <width>211</width>
+          <x>203</x>
+          <y>258</y>
+          <width>201</width>
           <height>21</height>
          </rect>
         </property>
@@ -1202,64 +1111,30 @@
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_email_13">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>280</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Complemento</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_complemento_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>280</y>
-          <width>211</width>
+          <x>203</x>
+          <y>289</y>
+          <width>201</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_14">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>250</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Rua</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_15">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>310</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Número</string>
         </property>
        </widget>
        <widget class="QComboBox" name="box_sexo_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>100</y>
-          <width>86</width>
-          <height>25</height>
+          <x>200</x>
+          <y>102</y>
+          <width>71</width>
+          <height>26</height>
          </rect>
         </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
         <item>
          <property name="text">
           <string>M</string>
@@ -1271,51 +1146,121 @@
          </property>
         </item>
        </widget>
-       <widget class="QLabel" name="label_clients_email_12">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>160</y>
-          <width>141</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Salário</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_salario_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>160</y>
-          <width>211</width>
+          <x>203</x>
+          <y>165</y>
+          <width>201</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_31">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>340</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Cargo</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="entrada_cargo_funcionario">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>340</y>
-          <width>211</width>
+          <x>203</x>
+          <y>351</y>
+          <width>201</width>
           <height>21</height>
          </rect>
         </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>10</y>
+          <width>125</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_clients_name_3">
+           <property name="text">
+            <string>CPF Funcionário</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_phone_3">
+           <property name="text">
+            <string>Nome</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_address_3">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_company_3">
+           <property name="text">
+            <string>Sexo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_11">
+           <property name="text">
+            <string>Data de Nascimento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_12">
+           <property name="text">
+            <string>Salário</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_7">
+           <property name="text">
+            <string>Telefone Fixo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_10">
+           <property name="text">
+            <string>Celular</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_14">
+           <property name="text">
+            <string>Rua</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_13">
+           <property name="text">
+            <string>Complemento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_15">
+           <property name="text">
+            <string>Número</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_31">
+           <property name="text">
+            <string>Cargo</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_3">
@@ -1335,32 +1280,6 @@
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_email_38">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>290</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Complemento</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_40">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>260</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Rua</string>
-        </property>
-       </widget>
        <widget class="QComboBox" name="box_sexo_enfermeiro">
         <property name="geometry">
          <rect>
@@ -1372,6 +1291,11 @@
         </property>
         <item>
          <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>M</string>
          </property>
         </item>
@@ -1380,32 +1304,6 @@
           <string>F</string>
          </property>
         </item>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_41">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>320</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Número</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_42">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>140</y>
-          <width>141</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Data de Nascimento</string>
-        </property>
        </widget>
        <widget class="QLineEdit" name="entrada_telefone_enfermeiro">
         <property name="geometry">
@@ -1427,32 +1325,6 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_20">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>200</y>
-          <width>91</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Telefone Fixo</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_43">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>170</y>
-          <width>141</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Salário</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_email_enfermeiro">
         <property name="geometry">
          <rect>
@@ -1461,19 +1333,6 @@
           <width>211</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_company_8">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>110</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Sexo</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="entrada_numero_enfermeiro">
@@ -1486,32 +1345,6 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_21">
-        <property name="geometry">
-         <rect>
-          <x>56</x>
-          <y>20</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Funcionário</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_22">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>230</y>
-          <width>91</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Celular</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_salario_enfermeiro">
         <property name="geometry">
          <rect>
@@ -1520,19 +1353,6 @@
           <width>211</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_address_8">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>80</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Email</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="entrada_celular_enfermeiro">
@@ -1563,19 +1383,6 @@
           <width>211</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_phone_8">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>50</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nome</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="entrada_cpf_enfermeiro">
@@ -1647,37 +1454,100 @@
          </rect>
         </property>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>125</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_clients_name_21">
+           <property name="text">
+            <string>CPF Funcionário</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_phone_8">
+           <property name="text">
+            <string>Nome</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_address_8">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_company_8">
+           <property name="text">
+            <string>Sexo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_42">
+           <property name="text">
+            <string>Data de Nascimento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_43">
+           <property name="text">
+            <string>Salário</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_20">
+           <property name="text">
+            <string>Telefone Fixo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_22">
+           <property name="text">
+            <string>Celular</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_40">
+           <property name="text">
+            <string>Rua</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_38">
+           <property name="text">
+            <string>Complemento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_41">
+           <property name="text">
+            <string>Número</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
         <string>Adicionar Administrador</string>
        </attribute>
-       <widget class="QLabel" name="label_clients_email_44">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>330</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Número</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_phone_9">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>60</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nome</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_numero_admin">
         <property name="geometry">
          <rect>
@@ -1686,19 +1556,6 @@
           <width>211</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_25">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>240</y>
-          <width>91</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Celular</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="entrada_email_admin">
@@ -1764,19 +1621,6 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_email_45">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>270</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Rua</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="botao_adicionar_admin">
         <property name="geometry">
          <rect>
@@ -1799,6 +1643,11 @@
           <height>25</height>
          </rect>
         </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
         <item>
          <property name="text">
           <string>M</string>
@@ -1844,32 +1693,6 @@ Estoque</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_address_9">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>90</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Email</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_39">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>300</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Complemento</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_usuario_admin">
         <property name="geometry">
          <rect>
@@ -1880,19 +1703,6 @@ Estoque</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_28">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>30</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF Funcionário</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="entrada_cpf_admin">
         <property name="geometry">
          <rect>
@@ -1901,58 +1711,6 @@ Estoque</string>
           <width>211</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_46">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>150</y>
-          <width>141</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Data de Nascimento</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_47">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>180</y>
-          <width>141</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Salário</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_29">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>210</y>
-          <width>91</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Telefone Fixo</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_company_9">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>120</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Sexo</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="entrada_senha_admin">
@@ -1979,6 +1737,95 @@ Estoque</string>
 Estoque</string>
         </property>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>125</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_clients_name_28">
+           <property name="text">
+            <string>CPF Funcionário</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_phone_9">
+           <property name="text">
+            <string>Nome</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_address_9">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_company_9">
+           <property name="text">
+            <string>Sexo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_46">
+           <property name="text">
+            <string>Data de Nascimento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_47">
+           <property name="text">
+            <string>Salário</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_29">
+           <property name="text">
+            <string>Telefone Fixo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_25">
+           <property name="text">
+            <string>Celular</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_45">
+           <property name="text">
+            <string>Rua</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_39">
+           <property name="text">
+            <string>Complemento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_44">
+           <property name="text">
+            <string>Número</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="tr_sales_tab_4">
        <attribute name="title">
@@ -1987,8 +1834,8 @@ Estoque</string>
        <widget class="QComboBox" name="pesquisa_box_sexo_funcionario">
         <property name="geometry">
          <rect>
-          <x>350</x>
-          <y>170</y>
+          <x>440</x>
+          <y>160</y>
           <width>86</width>
           <height>25</height>
          </rect>
@@ -2012,7 +1859,7 @@ Estoque</string>
        <widget class="QLineEdit" name="pesquisa_email_funcionario">
         <property name="geometry">
          <rect>
-          <x>350</x>
+          <x>440</x>
           <y>130</y>
           <width>161</width>
           <height>22</height>
@@ -2032,32 +1879,6 @@ Estoque</string>
          <string>Cargo</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_39">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>210</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Data de Nascmineto</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_38">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>50</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>CPF</string>
-        </property>
-       </widget>
        <widget class="QCheckBox" name="checkbox_salario_funcionario">
         <property name="geometry">
          <rect>
@@ -2071,40 +1892,14 @@ Estoque</string>
          <string>Salário</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_40">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>90</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nome</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="pesquisa_nome_funcionario">
         <property name="geometry">
          <rect>
-          <x>350</x>
+          <x>440</x>
           <y>90</y>
           <width>161</width>
           <height>22</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_32">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>130</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Email</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="checkbox_sexo_funcionario">
@@ -2113,19 +1908,6 @@ Estoque</string>
           <x>20</x>
           <y>140</y>
           <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Sexo</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_37">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>170</y>
-          <width>111</width>
           <height>20</height>
          </rect>
         </property>
@@ -2203,7 +1985,7 @@ Estoque</string>
          <rect>
           <x>20</x>
           <y>170</y>
-          <width>141</width>
+          <width>151</width>
           <height>20</height>
          </rect>
         </property>
@@ -2227,7 +2009,7 @@ Estoque</string>
        <widget class="QLineEdit" name="pesquisa_cpf_funcionario">
         <property name="geometry">
          <rect>
-          <x>350</x>
+          <x>440</x>
           <y>50</y>
           <width>161</width>
           <height>22</height>
@@ -2245,16 +2027,6 @@ Estoque</string>
         </property>
         <property name="text">
          <string>Nome</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="pesquisa_data_funcionario">
-        <property name="geometry">
-         <rect>
-          <x>350</x>
-          <y>210</y>
-          <width>161</width>
-          <height>22</height>
-         </rect>
         </property>
        </widget>
        <widget class="QCheckBox" name="checkbox_todos_funcionario">
@@ -2309,51 +2081,87 @@ Estoque</string>
          <string>Rua</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_clients_name_41">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>260</x>
-          <y>240</y>
-          <width>51</width>
-          <height>20</height>
+          <x>290</x>
+          <y>50</y>
+          <width>134</width>
+          <height>241</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Salário</string>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item>
+          <widget class="QLabel" name="label_clients_name_38">
+           <property name="text">
+            <string>CPF</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_40">
+           <property name="text">
+            <string>Nome</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_32">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_37">
+           <property name="text">
+            <string>Sexo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_39">
+           <property name="text">
+            <string>Data de Nascimento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_41">
+           <property name="text">
+            <string>Salário</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_42">
+           <property name="text">
+            <string>Cargo</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
-       <widget class="QLineEdit" name="pesquisa_salario_funcionario">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>350</x>
-          <y>240</y>
+          <x>440</x>
+          <y>200</y>
           <width>161</width>
-          <height>22</height>
+          <height>91</height>
          </rect>
         </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_42">
-        <property name="geometry">
-         <rect>
-          <x>260</x>
-          <y>270</y>
-          <width>51</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Cargo</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="pesquisa_cargo_funcionario">
-        <property name="geometry">
-         <rect>
-          <x>350</x>
-          <y>270</y>
-          <width>161</width>
-          <height>22</height>
-         </rect>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <widget class="QLineEdit" name="pesquisa_data_funcionario"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="pesquisa_salario_funcionario"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="pesquisa_cargo_funcionario"/>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>
@@ -2372,7 +2180,7 @@ Estoque</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_5">
        <attribute name="title">
@@ -2661,7 +2469,7 @@ Estoque</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_6">
        <attribute name="title">
@@ -2679,76 +2487,6 @@ Estoque</string>
         <property name="text">
          <string>Adicionar Pedido</string>
         </property>
-       </widget>
-       <widget class="QLineEdit" name="entrada_hospital_pedido">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>160</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="entrada_quantidade_pedido">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>190</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="box_tiposanguineo_pedido">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>220</y>
-          <width>86</width>
-          <height>25</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>A-</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>A+</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>B-</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>B+</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>AB-</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>AB+</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>O-</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>O+</string>
-         </property>
-        </item>
        </widget>
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
@@ -2779,6 +2517,73 @@ Estoque</string>
            <property name="text">
             <string>Tipo Sanguíneo</string>
            </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>150</y>
+          <width>131</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLineEdit" name="entrada_hospital_pedido"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="entrada_quantidade_pedido"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="box_tiposanguineo_pedido">
+           <item>
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>A-</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>A+</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>B-</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>B+</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AB-</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AB+</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>O-</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>O+</string>
+            </property>
+           </item>
           </widget>
          </item>
         </layout>
@@ -3008,7 +2813,7 @@ Estoque</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -3212,7 +3017,7 @@ Estoque</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>10</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="widgetResizable">
@@ -3240,7 +3045,7 @@ Estoque</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>10</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="text">
@@ -3264,7 +3069,7 @@ Estoque</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>9</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
      </widget>
