@@ -2,7 +2,7 @@ from database import cursor, db
 
 def exists_employee (cpf):
     cursor.execute("SELECT Nome FROM Funcionario WHERE CPF = '%s' " % (cpf,))
-    return verify_cursor(cursor)
+    return cursor.with_rows
 
 #Insere funcionario comum
 def insert_employee (employee_values,address_values,number_values):
@@ -58,13 +58,6 @@ def insert_number (number_values):
         cursor.execute("INSERT INTO Telefones_Funcionario VALUES %s" % (number_values[1],))
         db.commit()
     return True
-
-
-def verify_cursor(cursor):
-    for x in cursor:
-        return True
-    return False
-
 ############################################ PESQUISAS ################################################
 def create_dictionary (employee_values):
     dictionary = {'CPF': employee_values[0],

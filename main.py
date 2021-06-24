@@ -191,17 +191,11 @@ class NewWindow(QMainWindow):
         result = transaction.select_transaction(fields,values)
         self.displayTable(result)
 
-    def verify_cursor(self,cursor):
-        for x in cursor:
-            return True
-        return False
-
     def getQueryForms(self):
         try:
             cursor.execute(self.entrada_executar.toPlainText())
             db.commit()
-            aux = cursor
-            if self.verify_cursor(aux):
+            if cursor.with_rows:
                 results = []
                 field_names = [i[0] for i in cursor.description]
                 for row in cursor:
