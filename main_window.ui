@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_clients">
      <attribute name="title">
@@ -730,7 +730,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_3">
        <attribute name="title">
@@ -838,7 +838,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>90</y>
+          <y>80</y>
           <width>81</width>
           <height>20</height>
          </rect>
@@ -894,7 +894,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>120</y>
+          <y>110</y>
           <width>101</width>
           <height>20</height>
          </rect>
@@ -907,7 +907,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>180</y>
+          <y>170</y>
           <width>141</width>
           <height>20</height>
          </rect>
@@ -930,7 +930,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>150</y>
+          <y>140</y>
           <width>121</width>
           <height>20</height>
          </rect>
@@ -943,7 +943,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>210</y>
+          <y>200</y>
           <width>141</width>
           <height>20</height>
          </rect>
@@ -1009,7 +1009,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_4">
        <attribute name="title">
@@ -2378,32 +2378,6 @@ Estoque</string>
        <attribute name="title">
         <string>Adicionar</string>
        </attribute>
-       <widget class="QLabel" name="label_clients_phone_4">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>90</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nome</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_address_4">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>120</y>
-          <width>67</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Email</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="botao_adicionar_hospital">
         <property name="geometry">
          <rect>
@@ -2417,143 +2391,103 @@ Estoque</string>
          <string>Adicionar Hospital</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="entrada_nome_hospital">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>90</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="entrada_email_hospital">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>120</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="entrada_telefone_hospital">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>150</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="entrada_celular_hospital">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>180</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_11">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>180</y>
-          <width>91</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Celular</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_12">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>150</y>
-          <width>91</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Telefone Fixo</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="entrada_numero_hospital">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>270</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="entrada_rua_hospital">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>210</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_18">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>240</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Complemento</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="entrada_complemento_hospital">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>240</y>
-          <width>211</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_19">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>210</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Rua</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_20">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>80</x>
-          <y>270</y>
-          <width>121</width>
-          <height>20</height>
+          <y>80</y>
+          <width>91</width>
+          <height>211</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Número</string>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <widget class="QLabel" name="label_clients_phone_4">
+           <property name="text">
+            <string>Nome</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_address_4">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_12">
+           <property name="text">
+            <string>Telefone Fixo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_11">
+           <property name="text">
+            <string>Celular</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_19">
+           <property name="text">
+            <string>Rua</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_18">
+           <property name="text">
+            <string>Complemento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_20">
+           <property name="text">
+            <string>Número</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>80</y>
+          <width>201</width>
+          <height>221</height>
+         </rect>
         </property>
+        <layout class="QVBoxLayout" name="verticalLayout_16">
+         <item>
+          <widget class="QLineEdit" name="entrada_nome_hospital"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="entrada_email_hospital"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="entrada_telefone_hospital"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="entrada_celular_hospital"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="entrada_rua_hospital">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="entrada_complemento_hospital"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="entrada_numero_hospital"/>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tr_sales_tab_5">
@@ -2727,38 +2661,12 @@ Estoque</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_6">
        <attribute name="title">
         <string>Adicionar</string>
        </attribute>
-       <widget class="QLabel" name="label_clients_phone_5">
-        <property name="geometry">
-         <rect>
-          <x>66</x>
-          <y>160</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nome Hospital</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_address_5">
-        <property name="geometry">
-         <rect>
-          <x>76</x>
-          <y>190</y>
-          <width>91</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Quantidade</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="botao_adicionar_pedido">
         <property name="geometry">
          <rect>
@@ -2790,19 +2698,6 @@ Estoque</string>
           <width>211</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_email_22">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>220</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Tipo Sanguíneo</string>
         </property>
        </widget>
        <widget class="QComboBox" name="box_tiposanguineo_pedido">
@@ -2855,6 +2750,39 @@ Estoque</string>
          </property>
         </item>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>150</y>
+          <width>91</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item>
+          <widget class="QLabel" name="label_clients_phone_5">
+           <property name="text">
+            <string>Nome Hospital</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_address_5">
+           <property name="text">
+            <string>Quantidade</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_email_22">
+           <property name="text">
+            <string>Tipo Sanguíneo</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="tr_sales_tab_6">
        <attribute name="title">
@@ -2864,7 +2792,7 @@ Estoque</string>
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>100</y>
+          <y>80</y>
           <width>81</width>
           <height>20</height>
          </rect>
@@ -2877,7 +2805,7 @@ Estoque</string>
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>130</y>
+          <y>110</y>
           <width>111</width>
           <height>20</height>
          </rect>
@@ -2890,7 +2818,7 @@ Estoque</string>
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>160</y>
+          <y>140</y>
           <width>141</width>
           <height>20</height>
          </rect>
@@ -2903,7 +2831,7 @@ Estoque</string>
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>220</y>
+          <y>200</y>
           <width>141</width>
           <height>20</height>
          </rect>
@@ -2916,39 +2844,13 @@ Estoque</string>
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>190</y>
+          <y>170</y>
           <width>121</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
          <string>Tipo Sanguíneo</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_115">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>160</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Tipo Sanguíneo</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_114">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>80</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nome Hospital</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="pesquisa_nome_pedido">
@@ -3026,32 +2928,6 @@ Estoque</string>
          </property>
         </item>
        </widget>
-       <widget class="QLabel" name="label_clients_name_113">
-        <property name="geometry">
-         <rect>
-          <x>310</x>
-          <y>200</y>
-          <width>81</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Data Pedido</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_clients_name_157">
-        <property name="geometry">
-         <rect>
-          <x>310</x>
-          <y>120</y>
-          <width>71</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Quantidade</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="pesquisa_quantidade_pedido">
         <property name="geometry">
          <rect>
@@ -3074,6 +2950,46 @@ Estoque</string>
         <property name="text">
          <string>Pesquisar</string>
         </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>70</y>
+          <width>101</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_clients_name_114">
+           <property name="text">
+            <string>Nome Hospital</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_157">
+           <property name="text">
+            <string>Quantidade</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_115">
+           <property name="text">
+            <string>Tipo Sanguíneo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_113">
+           <property name="text">
+            <string>Data Pedido</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>
