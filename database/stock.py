@@ -16,7 +16,5 @@ def update(tipoSanguineo,quantidade):
 
 def select_quantidade(tipoSanguineo):
     cursor.execute(f"SELECT Quantidade FROM Estoque WHERE TipoSanguineo = '{tipoSanguineo}'")
-    for client in cursor:
-        num_campos = len(client)
-        for i in range (0,num_campos):
-            return(client[i])
+    for row in cursor:
+        return row[0]

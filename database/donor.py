@@ -154,10 +154,8 @@ def select_donor (fields,values):
 
 def select_tipoSanguineo (CPF):
     cursor.execute(f"SELECT TipoSanguineo FROM Doador WHERE CPF = '{CPF}'")
-    results = []
     for row in cursor:
-        results.append(row)
-    return (results)
+        return row[0]
 
 def select():
     cursor.execute(f"SELECT * FROM Doador")

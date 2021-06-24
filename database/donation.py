@@ -8,7 +8,7 @@ def insert_donation (donation_values):
 
 def update_stock (donation_values):
     tipoSanguineo = donor.select_tipoSanguineo (donation_values[0])
-    stock.update(tipoSanguineo,donation_values[3])
+    stock.update(tipoSanguineo,float(donation_values[3]))
     return True
 
 ############################################ PESQUISAS ################################################
