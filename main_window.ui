@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="tab_clients">
      <attribute name="title">
@@ -2391,7 +2391,7 @@ Estoque</string>
          <string>Adicionar Hospital</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2452,7 +2452,7 @@ Estoque</string>
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>180</x>
@@ -2750,12 +2750,12 @@ Estoque</string>
          </property>
         </item>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>60</x>
           <y>150</y>
-          <width>91</width>
+          <width>96</width>
           <height>101</height>
          </rect>
         </property>
@@ -2951,7 +2951,7 @@ Estoque</string>
          <string>Pesquisar</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>300</x>
@@ -3047,12 +3047,12 @@ Estoque</string>
          <string>Adicionar Transação</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>40</x>
           <y>100</y>
-          <width>92</width>
+          <width>98</width>
           <height>81</height>
          </rect>
         </property>
@@ -3137,12 +3137,12 @@ Estoque</string>
          <string>Pesquisar</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>40</x>
           <y>80</y>
-          <width>119</width>
+          <width>121</width>
           <height>101</height>
          </rect>
         </property>
@@ -3185,6 +3185,15 @@ Estoque</string>
         <width>801</width>
         <height>341</height>
        </rect>
+      </property>
+      <property name="toolTipDuration">
+       <number>0</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>

@@ -1,12 +1,11 @@
 from database import cursor, db, hospital
-from datetime import datetime
 from typing import Tuple
+from datetime import date
 
 def create_tuple (nome_hospital,order_list):
     id_hospital = hospital.select_ID(nome_hospital)
-    data_pedido = datetime.today
-    str_data = data_pedido.strftime("%Y-%m-%d")
-    order_list.append(str_data)
+    data_pedido = date.today().__str__()
+    order_list.append(data_pedido)
     order_list.append(id_hospital)
     return tuple(order_list)
 
@@ -58,24 +57,15 @@ def create_dictionary_fields (order_values):
     return create_string_fields(dictionary)
 
 def create_string_fields (dictionary):
-    string = ''
+    string = 'p.ID_Pedido'
     if (dictionary['NomeHospital'] == True):
-        string += f"h.Nome"
+        string += f",h.Nome"
     if (dictionary['Quantidade'] == True):
-        if (string != ''):
-            string += f",p.Quantidade"
-        else:
-            string += f"p.Quantidade"
+        string += f",p.Quantidade"
     if (dictionary['TipoSanguineo'] == True):
-        if (string != ''):
-            string += f",p.TipoSanguineo"
-        else:
-            string += f"p.TipoSanguineo"
+        string += f",p.TipoSanguineo"
     if (dictionary['DataPedido'] == True):
-        if (string != ''):
-            string += f",p.DataPedido"
-        else:
-            string += f"p.DataPedido"
+        string += f",p.DataPedido"
     return string
 
 def select_order (fields,values):

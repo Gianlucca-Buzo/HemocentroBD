@@ -305,7 +305,7 @@ class NewWindow(QMainWindow):
             self.updateStock()
         else:
             self.errorMessage("Erro ao adicionar Transação")
-        self.emptyTransacaoForms
+        self.emptyTransacaoForms()
 
 
 ############################################################# LIMPA OS CAMPOS ###################################################################################
