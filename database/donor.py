@@ -158,3 +158,11 @@ def select_tipoSanguineo (CPF):
     for row in cursor:
         results.append(row)
     return (results)
+
+def select():
+    cursor.execute(f"SELECT * FROM Doador")
+    results = []
+    field_names = [i[0] for i in cursor.description]
+    for row in cursor:
+        results.append(row)
+    return (results,field_names)

@@ -203,3 +203,11 @@ def select_employee (fields,values):
     for client in cursor:
         results.append(client)
     return (results,field_names)
+
+def select():
+    cursor.execute(f"SELECT * FROM Funcionario")
+    results = []
+    field_names = [i[0] for i in cursor.description]
+    for row in cursor:
+        results.append(row)
+    return (results,field_names)

@@ -99,5 +99,6 @@ def select_for_transaction (id_pedido):
     results = []
     for row in cursor:
         results.append(row)
-    return (results)
+    return results
+
 

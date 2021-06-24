@@ -8,7 +8,7 @@ def insert_transaction (transaction_values):
 
 def update_stock(transaction_values):
     results = order.select_for_transaction(transaction_values[0])
-    stock.update(results[0],-(results[1]))
+    stock.update(results[0][0],-(results[0][1]))
     return True
 
 ############################################ PESQUISAS ################################################
@@ -46,10 +46,18 @@ def create_string_fields (dictionary):
             string += f"DataTransacao"
     return string
 
-def select_order (fields,values):
+def select_transaction (fields,values):
     cursor.execute(f"SELECT {fields} FROM Transacao WHERE {values}")
     field_names = [i[0] for i in cursor.description]
     results = []
     for client in cursor:
         results.append(client)
+    return (results,field_names)
+
+def select():
+    cursor.execute(f"SELECT * FROM Transacao")
+    results = []
+    field_names = [i[0] for i in cursor.description]
+    for row in cursor:
+        results.append(row)
     return (results,field_names)

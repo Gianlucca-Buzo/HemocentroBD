@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Hemocentro</class>
+ <widget class="QMainWindow" name="Hemocentro">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Hemocentro</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="main_tabs">
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="tab_clients">
      <attribute name="title">
@@ -659,7 +659,7 @@
          <string>Todos</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>270</x>
@@ -789,7 +789,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -952,7 +952,7 @@
          <string>Quantidade</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>280</x>
@@ -1009,7 +1009,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_4">
        <attribute name="title">
@@ -2727,7 +2727,7 @@ Estoque</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tr_general_vision_tab_6">
        <attribute name="title">
@@ -3075,19 +3075,6 @@ Estoque</string>
          <string>Pesquisar</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="botao_pesquisar_pedido_2">
-        <property name="geometry">
-         <rect>
-          <x>540</x>
-          <y>330</y>
-          <width>171</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Pesquisar</string>
-        </property>
-       </widget>
       </widget>
      </widget>
     </widget>
@@ -3105,41 +3092,256 @@ Estoque</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Adicionar</string>
+       </attribute>
+       <widget class="QLineEdit" name="entrada_idpedido_transacao">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>110</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entrada_data_transacao">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>150</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="botao_adicionar_transacao">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>110</y>
+          <width>171</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Adicionar Transação</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>100</y>
+          <width>92</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_clients_name_119">
+           <property name="text">
+            <string>ID Pedido</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_clients_name_159">
+           <property name="text">
+            <string>Data Transação</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
       <widget class="QWidget" name="tr_sales_tab_7">
        <attribute name="title">
         <string>Pesquisar</string>
        </attribute>
-       <widget class="QPushButton" name="tr_button_sale_7">
+       <widget class="QLineEdit" name="pesquisa_idpedido_transacao">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>70</y>
+          <x>400</x>
+          <y>100</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_126">
+        <property name="geometry">
+         <rect>
+          <x>301</x>
+          <y>91</y>
+          <width>89</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ID Pedido</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_clients_name_162">
+        <property name="geometry">
+         <rect>
+          <x>301</x>
+          <y>134</y>
+          <width>89</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Data Pedido</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="pesquisa_data_transacao">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>140</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="botao_pesquisar_transacao">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>240</y>
           <width>171</width>
           <height>51</height>
          </rect>
         </property>
         <property name="text">
-         <string>Adicionar Venda</string>
+         <string>Pesquisar</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_17">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>90</y>
-          <width>86</width>
-          <height>25</height>
+          <x>40</x>
+          <y>80</y>
+          <width>119</width>
+          <height>101</height>
          </rect>
         </property>
-        <item>
-         <property name="text">
-          <string>Cpf</string>
-         </property>
-        </item>
+        <layout class="QVBoxLayout" name="verticalLayout_12">
+         <item>
+          <widget class="QCheckBox" name="checkbox_todos_transacao">
+           <property name="text">
+            <string>Todos</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkbox_idpedido_transacao">
+           <property name="text">
+            <string>ID Pedido</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkbox_data_transacao">
+           <property name="text">
+            <string>Data Transação</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_16">
+     <attribute name="title">
+      <string>Estoque</string>
+     </attribute>
+     <widget class="QTableWidget" name="estoque_table">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>801</width>
+        <height>341</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_17">
+     <attribute name="title">
+      <string>Avançado</string>
+     </attribute>
+     <widget class="QScrollArea" name="scroll">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>241</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>239</width>
+         <height>339</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="botao_executar">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>340</y>
+        <width>501</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Executar</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="entrada_executar">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>40</y>
+        <width>501</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
      </widget>
     </widget>
    </widget>
